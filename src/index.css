@@ -287,10 +287,13 @@
 /* ScrollDownIndicator */
 
 .scrolldown {
+  --color: skyblue;
+  --sizeX: 30px;
+  --sizeY: 50px;
   position: relative;
   width: 30px;
   height: 50px;
-  margin-left: var(30px / 2);
+  margin-left: calc(30px / 2);
   border: calc(30px / 10) solid skyblue;
   border-radius: 50px;
   box-sizing: border-box;
