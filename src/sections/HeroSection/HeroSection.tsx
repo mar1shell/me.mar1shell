@@ -3,10 +3,10 @@ import { motion } from "motion/react";
 
 export default function HeroSection() {
   return (
-    <section className="grid grid-cols-1 gap-8 py-20 md:grid-cols-5">
+    <section className="grid grid-cols-1 items-center justify-center py-5 max-md:text-center md:grid-cols-5 md:gap-8 md:py-20">
       <Avatar />
       <motion.div
-        className="col-span-1 flex flex-col md:col-span-3"
+        className="col-span-1 flex flex-col max-md:pt-10 md:col-span-3"
         initial={{ opacity: 0, y: 400 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -14,9 +14,10 @@ export default function HeroSection() {
           type: "spring",
           stiffness: 50,
           ease: "easeInOut",
+          delay: 0.2,
         }}
       >
-        <h1 className="mb-4 text-3xl font-bold whitespace-nowrap text-gray-900 md:text-4xl dark:text-white">
+        <h1 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl md:whitespace-nowrap dark:text-white">
           Hello, I'm{" "}
           <motion.span
             className="inline-block bg-gradient-to-tr from-blue-500 via-cyan-400 to-teal-400 bg-clip-text pl-1 text-5xl text-transparent transition-all duration-500 dark:from-teal-400 dark:via-lime-500 dark:to-green-600"
@@ -30,7 +31,7 @@ export default function HeroSection() {
         <h2 className="mb-6 text-xl font-semibold text-gray-700 dark:text-gray-300">
           I'm a Software Engineering Student and Fullsatck Devoloper
         </h2>
-        <ul className="pl-5">
+        <ul className="pl-5 max-md:pt-20">
           <li className="mb-2 text-gray-600 transition-transform duration-300 hover:translate-x-1 dark:text-gray-400">
             🌍 Based in Casablanca, Morocco
           </li>
