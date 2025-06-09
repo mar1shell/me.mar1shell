@@ -294,7 +294,7 @@
   width: var(--sizeX);
   height: var(--sizeY);
   margin-left: var(sizeX / 2);
-  border: calc(var(--sizeX) / 10) solid var(skyblue);
+  border: calc(var(--sizeX) / 10) solid skyblue;
   border-radius: 50px;
   box-sizing: border-box;
   margin-bottom: 16px;
@@ -309,7 +309,7 @@
   width: 6px;
   height: 6px;
   margin-left: -3px;
-  background-color: var(skyblue);
+  background-color: skyblue;
   border-radius: 100%;
   animation: scrolldown-anim 2s infinite;
   box-sizing: border-box;
@@ -352,7 +352,7 @@
 .chevrondown {
   margin-top: -6px;
   position: relative;
-  border: solid var(skyblue);
+  border: solid skyblue;
   border-width: 0 3px 3px 0;
   display: inline-block;
   width: 10px;
