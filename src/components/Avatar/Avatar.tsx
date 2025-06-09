@@ -12,10 +12,11 @@ export default function Avatar({
   return (
     <div className="col-span-2 flex items-center justify-center transition">
       <motion.div
-        initial={{ x: -300 }}
-        animate={{ x: 0 }}
+        initial={{ x: -300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         transition={{
           duration: 0.8,
+          delay: 0.2,
           type: "spring",
           stiffness: 50,
           ease: "easeOut",
