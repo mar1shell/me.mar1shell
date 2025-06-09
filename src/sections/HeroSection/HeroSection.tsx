@@ -1,9 +1,10 @@
 import Avatar from "../../components/Avatar/Avatar";
+import ScrollDownIndicator from "../../components/common/ScrollDownIndicator/ScrollDownIndicator";
 import { motion } from "motion/react";
 
 export default function HeroSection() {
   return (
-    <section className="grid grid-cols-1 items-center justify-center py-5 max-md:text-center md:grid-cols-5 md:gap-8 md:py-20">
+    <section className="grid grid-cols-1 items-center justify-center py-5 max-md:text-center md:grid-cols-5 md:gap-8 md:py-9">
       <Avatar />
       <motion.div
         className="col-span-1 flex flex-col max-md:pt-10 md:col-span-3"
@@ -31,7 +32,10 @@ export default function HeroSection() {
         <h2 className="mb-6 text-xl font-semibold text-gray-700 dark:text-gray-300">
           I'm a Software Engineering Student and Fullsatck Devoloper
         </h2>
-        <ul className="pl-5 max-md:pt-20">
+        <div className="mb-6 flex items-center justify-center md:hidden">
+          <ScrollDownIndicator />
+        </div>
+        <ul className="md:pl-5">
           <li className="mb-2 text-gray-600 transition-transform duration-300 hover:translate-x-1 dark:text-gray-400">
             🌍 Based in Casablanca, Morocco
           </li>
