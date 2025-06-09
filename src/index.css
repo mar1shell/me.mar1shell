@@ -291,10 +291,10 @@
   --sizeX: 30px;
   --sizeY: 50px;
   position: relative;
-  width: var(--sizeX);
-  height: var(--sizeY);
+  width: 30px;
+  height: 50px;
   margin-left: var(sizeX / 2);
-  border: calc(var(--sizeX) / 10) solid skyblue;
+  border: calc(30px / 10) solid skyblue;
   border-radius: 50px;
   box-sizing: border-box;
   margin-bottom: 16px;
