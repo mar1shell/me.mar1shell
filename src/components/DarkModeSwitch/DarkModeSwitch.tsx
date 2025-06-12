@@ -1,4 +1,4 @@
-import useDarkMode from "../../hooks/useDarkMode/UseDarkMode";
+import useDarkMode from "../../hooks/useDarkMode/useDarkMode";
 import "./DarkModeSwitch.css";
 
 const DarkModeSwitch = () => {
