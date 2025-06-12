@@ -1,10 +1,11 @@
-import useDarkMode from "../../hooks/UseDarkMode/UseDarkMode";
+import useDarkMode from "../../hooks/useDarkMode/UseDarkMode";
+import "./DarkModeSwitch.css";
 
 const DarkModeSwitch = () => {
   const [isDarkMode, setDarkMode] = useDarkMode();
-  console.log("DarkMode: ", isDarkMode);
+
   return (
-    <label className="switch">
+    <label className="switch interactive">
       <input
         id="input"
         type="checkbox"

@@ -26,8 +26,11 @@ export default function SmoothFollower() {
     // Add event listeners
     window.addEventListener("mousemove", handleMouseMove);
 
+    // Select all interactive elements
+    // This includes links, buttons, inputs, textareas, and elements with the 'interactive' class
+
     const interactiveElements = document.querySelectorAll(
-      "a, button, img, input, textarea, select",
+      "a, button, input, textarea, .interactive",
     );
     interactiveElements.forEach((element) => {
       element.addEventListener("mouseenter", handleMouseEnter);
@@ -93,6 +96,7 @@ export default function SmoothFollower() {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-1000 hidden sm:block">
+      {/* small circle */}
       <div
         className="absolute rounded-full bg-black dark:bg-white"
         style={{
@@ -103,9 +107,9 @@ export default function SmoothFollower() {
           top: `${renderPos.dot.y}px`,
         }}
       />
-
+      {/* big circle */}
       <div
-        className="absolute rounded-full border border-black dark:border-white"
+        className={`absolute rounded-full border transition-all duration-500 ${isHovering ? "border-3 border-cyan-500 dark:border-green-500" : "border-black dark:border-white"}`}
         style={{
           width: isHovering ? "44px" : "28px",
           height: isHovering ? "44px" : "28px",
