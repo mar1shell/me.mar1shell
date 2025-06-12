@@ -11,7 +11,6 @@ export default function TerminalTemplate({
   username = "mar1shell",
   command = "cat aboutmar1.txt",
   bio = "Hey! I'm Marouane, a Computer Science & AI student at ENSAM Casablanca. I love solving LeetCode problems, building fullstack apps, and walking the streets of Casablanca with a playlist full of diverse music. I’m passionate about software engineering, currently diving into backend fundamentals and crafting clean, meaningful code. I also enjoy volunteering, reading the news, and dreaming big. Hire me before I join the Night’s Watch. 😉",
-  className = "",
 }: TerminalTemplateProps) {
   return (
     <div className="interactive mx-auto max-w-4xl overflow-hidden rounded-lg bg-gray-800 font-mono shadow-2xl dark:bg-gray-200">
