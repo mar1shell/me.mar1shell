@@ -19,6 +19,18 @@ const heroCaptions: HeroCaption[] = [
   },
 ];
 
+interface TerminalData {
+  username: String;
+  command: String;
+  bio: String;
+}
+
+const terminalData: TerminalData = {
+  username: "mar1shell",
+  command: "cat aboutmar1.txt",
+  bio: "Hey! I'm Marouane, a Computer Science & AI student at ENSAM Casablanca. I love solving LeetCode problems, building fullstack apps, and walking the streets of Casablanca with a playlist full of diverse music. I’m passionate about software engineering, currently diving into backend fundamentals and crafting clean, meaningful code. I also enjoy volunteering, reading the news, and dreaming big. Hire me before I join the Night’s Watch. 😉",
+};
+
 interface Project {
   id: number;
   title: string;
@@ -32,7 +44,7 @@ interface Project {
   unfinished?: boolean;
 }
 
-const Projects: Project[] = [
+const projects: Project[] = [
   {
     id: 1,
     title: "Finex - Financial Management App",
@@ -67,4 +79,4 @@ const Projects: Project[] = [
   },
 ];
 
-export { heroCaptions, Projects };
+export { heroCaptions, terminalData, projects };

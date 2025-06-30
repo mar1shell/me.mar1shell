@@ -1,5 +1,5 @@
 import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
-import { Projects } from "../../utils/data";
+import { projects } from "../../utils/data";
 import { motion } from "motion/react";
 
 interface ProjectsSectionProps {
@@ -9,8 +9,6 @@ interface ProjectsSectionProps {
 export default function ProjectsSection({
   className = "",
 }: ProjectsSectionProps) {
-  const projects = Projects;
-
   return (
     <section className={`py-16 ${className}`}>
       <SectionTitle title="Projects" />
