@@ -1,0 +1,233 @@
+import {
+  Calendar,
+  MapPin,
+  ExternalLink,
+  TrendingUp,
+  Users,
+  Code,
+  Award,
+  ChevronRight,
+} from "lucide-react";
+import { motion } from "motion/react";
+import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
+import { experiences } from "../../utils/data";
+
+export default function ExperienceSection() {
+  return (
+    <section className="py-16 md:px-10">
+      <div className="mx-auto max-w-7xl px-4">
+        {/* Section Header */}
+        <SectionTitle title="Experience" />
+
+        {/* Experience Grid */}
+        <div className="grid gap-16">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              className={`group relative ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.5,
+                type: "spring",
+                stiffness: 50,
+                ease: "easeInOut",
+                delay: index * 0.1,
+              }}
+            >
+              <div className="items-center gap-16 lg:grid lg:grid-cols-2">
+                {/* Experience Visual */}
+                <div className="relative mb-8 lg:mb-0">
+                  <div className="relative transition-transform duration-500 group-hover:scale-105">
+                    {/* Main Card */}
+                    <div className="relative overflow-hidden rounded-xl border-0 bg-white shadow-2xl dark:bg-slate-900">
+                      <div className="p-8">
+                        {/* Company Logo & Header */}
+                        <div className="mb-6 flex items-center gap-4">
+                          <div className="relative">
+                            <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl bg-gray-100 p-1 dark:bg-slate-800">
+                              <img
+                                src={
+                                  exp.logo ||
+                                  "/placeholder.svg?height=40&width=40&query=company logo"
+                                }
+                                alt={`${exp.company} logo`}
+                                width="40"
+                                height="40"
+                                className="object-contain"
+                              />
+                            </div>
+                            {exp.current && (
+                              <div className="absolute -top-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-green-500">
+                                <div className="h-2 w-2 animate-pulse rounded-full bg-white"></div>
+                              </div>
+                            )}
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-bold text-gray-900 dark:text-white">
+                              {exp.company}
+                            </h4>
+                            <p className="text-gray-600 dark:text-gray-400">
+                              {exp.type}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Duration & Location */}
+                        <div className="mb-4 flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
+                          <div className="flex items-center gap-1">
+                            <Calendar className="h-4 w-4" />
+                            <span>{exp.period}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <MapPin className="h-4 w-4" />
+                            <span>{exp.location}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Floating Skills Badge */}
+                    <div className="absolute -right-4 -bottom-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-xl dark:border-slate-700 dark:bg-slate-800">
+                      <div className="flex max-w-32 flex-wrap gap-1">
+                        {exp.skills.slice(0, 3).map((skill, skillIndex) => (
+                          <span
+                            key={skillIndex}
+                            className="rounded-full bg-blue-100 px-2 py-1 text-xs text-blue-700 dark:bg-green-900/30 dark:text-green-400"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                        {exp.skills.length > 3 && (
+                          <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-600 dark:bg-slate-700 dark:text-gray-400">
+                            +{exp.skills.length - 3}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Glow Effect */}
+                    <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-blue-400/20 to-cyan-500/20 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100 dark:from-green-400/20 dark:to-emerald-500/20"></div>
+                  </div>
+                </div>
+
+                {/* Experience Details */}
+                <div className="space-y-6">
+                  {/* Badges */}
+                  <div className="flex flex-wrap gap-3">
+                    {exp.featured && (
+                      <span className="inline-block rounded-full border border-cyan-400/20 bg-blue-400/10 px-3 py-1 text-sm font-medium text-cyan-500 dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-400">
+                        Featured Experience
+                      </span>
+                    )}
+                    {exp.current && (
+                      <span className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-3 py-1 text-sm font-medium text-green-600 dark:border-green-400/30 dark:bg-green-500/10 dark:text-green-400">
+                        <div className="h-2 w-2 animate-pulse rounded-full bg-green-500"></div>
+                        Current
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-3xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-blue-400 lg:text-4xl dark:text-white dark:group-hover:text-green-400">
+                    {exp.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                    {exp.description}
+                  </p>
+
+                  {/* All Achievements */}
+                  <div>
+                    <div className="mb-4 flex items-center gap-2">
+                      <Award className="h-5 w-5 text-blue-400 dark:text-green-400" />
+                      <span className="font-semibold text-gray-900 dark:text-white">
+                        Key Achievements
+                      </span>
+                    </div>
+                    <ul className="space-y-3">
+                      {exp.achievements.map((achievement, achIndex) => (
+                        <li key={achIndex} className="flex items-start gap-3">
+                          <ChevronRight className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-400 dark:text-green-400" />
+                          <span className="text-gray-700 dark:text-gray-300">
+                            {achievement}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* All Technologies */}
+                  <div>
+                    <div className="mb-4 flex items-center gap-2">
+                      <Code className="h-5 w-5 text-blue-400 dark:text-green-400" />
+                      <span className="font-semibold text-gray-900 dark:text-white">
+                        Technologies
+                      </span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="rounded-full border border-gray-400 bg-gray-200 px-3 py-1 text-sm font-medium text-gray-700 transition-colors duration-300 hover:border-blue-500 dark:border-slate-700 dark:bg-slate-800 dark:text-gray-300 dark:hover:border-green-400"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex justify-center gap-4 pt-4 md:justify-start">
+                    <a>
+                      <button className="group/btn inline-flex items-center rounded-full bg-blue-400 px-6 py-3 font-semibold text-gray-900 transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-400/25 dark:bg-green-400 dark:hover:bg-green-500">
+                        <ExternalLink className="mr-2 h-5 w-5 transition-transform duration-300 group-hover/btn:rotate-12" />
+                        View Details
+                      </button>
+                    </a>
+                    <a>
+                      <button className="group/btn inline-flex items-center rounded-full border-2 border-blue-400 bg-transparent px-6 py-3 font-semibold text-blue-400 transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:text-gray-900 dark:border-green-400 dark:text-green-400 dark:hover:bg-green-500">
+                        <Users className="mr-2 h-5 w-5 transition-transform duration-300 group-hover/btn:rotate-12" />
+                        Connect
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Stats Section */}
+        <motion.div
+          className="mt-20 grid grid-cols-2 gap-8 md:grid-cols-4"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          {[
+            { label: "Years Experience", value: "2+", icon: Calendar },
+            { label: "Projects Completed", value: "15+", icon: Code },
+            { label: "Happy Clients", value: "12+", icon: Users },
+            { label: "Technologies", value: "20+", icon: TrendingUp },
+          ].map((stat, index) => (
+            <div key={index} className="group text-center">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-400 transition-transform duration-300 group-hover:scale-110 dark:bg-green-400">
+                <stat.icon className="h-8 w-8 text-gray-900" />
+              </div>
+              <div className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+                {stat.value}
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}

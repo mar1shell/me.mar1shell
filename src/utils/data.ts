@@ -79,4 +79,86 @@ const projects: Project[] = [
   },
 ];
 
-export { heroCaptions, terminalData, projects };
+const experiences = [
+  {
+    title: "Frontend Developer & AI Trainer",
+    company: "Outlier AI",
+    logo: "/images/experiences/outlier.png",
+    location: "Remote",
+    period: "Dec 2024 - Present",
+    duration: "2+ months",
+    type: "Part-time",
+    description:
+      "Reviewing AI-generated frontend code and optimizing programs for machine learning pipelines while contributing to AI model training through data annotation and voice recordings.",
+    achievements: [
+      "Selected as a top contributor among 500+ applicants in a Frontend Project",
+      "Selected as a reviewer for diffrent AI projects",
+    ],
+    skills: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Python",
+      "JavaScript",
+      "C Programming",
+      "Machine Learning",
+      "Data Annotation",
+      "LLM Training",
+    ],
+    current: true,
+    featured: true,
+  },
+  {
+    title: "Fullstack Developer Intern",
+    company:
+      "ONEE - BE Casablanca (National Office of Electricity and Drinking Water - Branch of Electricity)",
+    logo: "/images/experiences/onee.jpeg",
+    location: "Casablanca, Morocco",
+    period: "Summer 2025",
+    duration: "1 months",
+    type: "Internship",
+    description:
+      "Upcoming internship focused on developing energy management systems and infrastructure solutions for Morocco's national electricity network.",
+    achievements: [],
+    skills: [
+      "Python",
+      "Data Analysis",
+      "Energy Systems",
+      "Database Management",
+      "System Architecture",
+      "Project Planning",
+    ],
+    current: true,
+    featured: false,
+  },
+
+  {
+    title: "Computer Science & AI Student",
+    company: "ENSAM Casablanca",
+    logo: "/images/experiences/ensam.png",
+    location: "Casablanca, Morocco",
+    period: "2022 - Present",
+    duration: "2+ years",
+    type: "Education",
+    description:
+      "Pursuing advanced degree in Computer Science with specialization in Artificial Intelligence. Active in academic projects and programming competitions.",
+    achievements: [
+      "Top 3 out of 300+ students in first two years",
+      "Maintained strong academic performance in core CS subjects",
+      "Actively participated in coding competitions and hackathons",
+    ],
+    skills: [
+      "Algorithms",
+      "Data Structures",
+      "Machine Learning",
+      "Mathematics",
+      "Problem Solving",
+      "Software Engineering",
+    ],
+    current: true,
+    featured: false,
+  },
+];
+
+export { heroCaptions, terminalData, projects, experiences };

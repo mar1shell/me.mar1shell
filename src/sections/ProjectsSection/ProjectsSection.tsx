@@ -10,7 +10,7 @@ export default function ProjectsSection({
   className = "",
 }: ProjectsSectionProps) {
   return (
-    <section className={`py-16 ${className}`}>
+    <section className={`py-16 md:px-10 ${className}`}>
       <SectionTitle title="Projects" />
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-16">
@@ -19,7 +19,7 @@ export default function ProjectsSection({
               key={project.id}
               className={`group relative ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
             >
-              <div className="items-center lg:grid lg:grid-cols-2 lg:gap-12">
+              <div className="items-center gap-16 lg:grid lg:grid-cols-2">
                 {/* Project Mockup */}
                 <motion.div
                   className="relative mb-8 lg:mb-0"
@@ -132,7 +132,7 @@ export default function ProjectsSection({
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex justify-center gap-4 md:justify-start">
                     {project.liveDemo && (
                       <a
                         href={project.liveDemo}
