@@ -10,7 +10,7 @@ export default function Avatar({
   alt = "Avatar",
 }: AvatarProps) {
   return (
-    <div className="col-span-2 flex items-center justify-center transition">
+    <div className="z-1000 col-span-2 flex items-center justify-center transition">
       <motion.div
         initial={{ x: -300, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}

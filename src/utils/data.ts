@@ -1,3 +1,15 @@
+import {
+  Github,
+  Linkedin,
+  Instagram,
+  Code,
+  Users,
+  Zap,
+  Facebook,
+} from "lucide-react";
+
+// Hero Section Data
+
 interface HeroCaption {
   content: string;
 }
@@ -30,6 +42,8 @@ const terminalData: TerminalData = {
   command: "cat aboutmar1.txt",
   bio: "Hey! I'm Marouane, a Computer Science & AI student at ENSAM Casablanca. I love solving LeetCode problems, building fullstack apps, and walking the streets of Casablanca with a playlist full of diverse music. I’m passionate about software engineering, currently diving into backend fundamentals and crafting clean, meaningful code. I also enjoy volunteering, reading the news, and dreaming big. Hire me before I join the Night’s Watch. 😉",
 };
+
+// Projects Section Data
 
 interface Project {
   id: number;
@@ -79,7 +93,26 @@ const projects: Project[] = [
   },
 ];
 
-const experiences = [
+// Experience Section Data
+
+type Experience = {
+  title: string;
+  company: string;
+  logo: string;
+  location: string;
+  period: string;
+  duration: string;
+  type: string;
+  description: string;
+  achievements: string[];
+  skills: string[];
+  current: boolean;
+  featured: boolean;
+  detailsLink: string;
+  connectLink: string;
+};
+
+const experiences: Experience[] = [
   {
     title: "Frontend Developer & AI Trainer",
     company: "Outlier AI",
@@ -108,11 +141,14 @@ const experiences = [
     ],
     current: true,
     featured: true,
+    detailsLink: "https://outlier.ai",
+    connectLink:
+      "https://www.linkedin.com/company/try-outlier/posts/?feedView=all",
   },
   {
     title: "Fullstack Developer Intern",
     company:
-      "ONEE - BE Casablanca (National Office of Electricity and Drinking Water - Branch of Electricity)",
+      "ONEE - BE Casablanca (National Office of Electricity and Drinking Water)",
     logo: "/images/experiences/onee.jpeg",
     location: "Casablanca, Morocco",
     period: "Summer 2025",
@@ -131,6 +167,8 @@ const experiences = [
     ],
     current: true,
     featured: false,
+    detailsLink: "https://www.one.org.ma",
+    connectLink: "",
   },
 
   {
@@ -158,7 +196,69 @@ const experiences = [
     ],
     current: true,
     featured: false,
+    detailsLink: "https://ensam-casa.ma",
+    connectLink: "https://www.linkedin.com/company/ensam-casa-officielle",
   },
 ];
 
-export { heroCaptions, terminalData, projects, experiences };
+// Footer Section Data
+const socialLinks = [
+  {
+    icon: Github,
+    label: "GitHub",
+    href: "https://github.com/mar1shell",
+    color: "hover:text-gray-900 dark:hover:text-white",
+    bgColor: "hover:bg-gray-900/10 dark:hover:bg-white/10",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/elhamdaouimarouane",
+    color: "hover:text-blue-600 dark:hover:text-blue-400",
+    bgColor: "hover:bg-blue-600/10 dark:hover:bg-blue-400/10",
+  },
+  {
+    icon: Facebook,
+    label: "Facebook",
+    href: "https://web.facebook.com/elhamdaouimar1",
+    color: "hover:text-blue-400 dark:hover:text-blue-300",
+    bgColor: "hover:bg-blue-400/10 dark:hover:bg-blue-300/10",
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    href: "https://instagram.com/marouane",
+    color: "hover:text-pink-500 dark:hover:text-pink-400",
+    bgColor: "hover:bg-pink-500/10 dark:hover:bg-pink-400/10",
+  },
+];
+
+const stats = [
+  {
+    icon: Code,
+    label: "Lines of Code",
+    value: "50K+",
+    color: "text-blue-500 dark:text-green-400",
+  },
+  {
+    icon: Users,
+    label: "Happy Clients",
+    value: "2+",
+    color: "text-purple-500 dark:text-purple-400",
+  },
+  {
+    icon: Zap,
+    label: "Projects Built",
+    value: "10+",
+    color: "text-amber-500 dark:text-yellow-400",
+  },
+];
+
+export {
+  heroCaptions,
+  terminalData,
+  projects,
+  experiences,
+  socialLinks,
+  stats,
+};

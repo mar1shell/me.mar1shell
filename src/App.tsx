@@ -5,18 +5,22 @@ import AboutMeSection from "./sections/AboutMeSection/AboutMeSection";
 import ProjectsSection from "./sections/ProjectsSection/ProjectsSection";
 import ExperienceSection from "./sections/ExperienceSection/ExperienceSection";
 import ContactSection from "./sections/ContactSection/ContactSection";
+import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <>
-      <div className="min-h-screen overflow-x-hidden bg-gray-100 pt-12 font-sans transition-colors duration-500 dark:bg-gray-900">
+      <div className="min-h-screen overflow-x-hidden bg-gray-100 font-sans transition-colors duration-500 dark:bg-gray-900">
         <NavBar />
-        <main className="container mx-auto flex flex-col items-center justify-center gap-5 px-4 py-8">
+        <main className="container mx-auto flex flex-col items-center justify-center gap-5 px-4">
           <HeroSection />
           <AboutMeSection />
           <ProjectsSection />
           <ExperienceSection />
           <ContactSection />
+          <Footer />
+          <ScrollToTop />
         </main>
       </div>
       <SmoothFollower />

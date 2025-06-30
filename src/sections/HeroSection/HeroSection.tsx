@@ -7,7 +7,7 @@ import { heroCaptions } from "../../utils/data";
 
 export default function HeroSection() {
   return (
-    <div className="max-md:flex max-md:min-h-[90vh] max-md:flex-col max-md:items-center max-md:justify-between">
+    <div className="min-h-[min(100vh,100%)] pt-20 max-md:flex max-md:flex-col max-md:items-center max-md:justify-between">
       <section className="grid grid-cols-1 items-center justify-center py-5 max-md:text-center md:grid-cols-5 md:gap-8 md:py-9">
         <Avatar />
         <motion.div
@@ -42,7 +42,7 @@ export default function HeroSection() {
               <HeroCaption key={index} content={caption.content} />
             ))}
           </ul>
-          {/* Sociam media icons line */}
+          {/* Social media icons line */}
           <div className="flex items-center justify-center gap-6 md:justify-center">
             <SocialMediaBar />
           </div>

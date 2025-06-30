@@ -4,18 +4,19 @@ import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
 
 export default function AboutMeSection() {
   return (
-    <section className="justify- mt-3 flex flex-col items-center">
+    <section className="flex flex-col items-center justify-center px-4 py-6">
       <SectionTitle title="About Me" />
       <motion.div
-        initial={{ opacity: 0, x: -300 }}
+        initial={{ opacity: 0, y: 50 }}
         transition={{
-          duration: 0.3,
-          delay: 0.3,
+          duration: 0.6,
+          delay: 0.2,
           type: "spring",
           stiffness: 60,
         }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        className="w-full"
       >
         <TerminalTemplate />
       </motion.div>
