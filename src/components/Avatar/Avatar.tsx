@@ -6,7 +6,7 @@ interface AvatarProps {
 }
 
 export default function Avatar({
-  src = "/images/avatar.JPG",
+  src = "/images/avatar.jpeg",
   alt = "Avatar",
 }: AvatarProps) {
   return (
