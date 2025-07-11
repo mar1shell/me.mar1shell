@@ -8,7 +8,10 @@ import { heroCaptions } from "../../utils/data";
 export default function HeroSection() {
   return (
     <div className="min-h-[min(100vh,100%)] pt-20 max-md:flex max-md:flex-col max-md:items-center max-md:justify-between">
-      <section className="grid grid-cols-1 items-center justify-center py-5 max-md:text-center md:grid-cols-5 md:gap-8 md:py-9">
+      <section
+        id="hero-section"
+        className="grid grid-cols-1 items-center justify-center py-5 max-md:text-center md:grid-cols-5 md:gap-8 md:py-9"
+      >
         <Avatar />
         <motion.div
           className="col-span-1 flex flex-col max-md:pt-10 md:col-span-3"

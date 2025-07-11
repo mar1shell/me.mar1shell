@@ -123,7 +123,16 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <div className="mb-4 flex flex-col items-center justify-center gap-2 text-gray-600 sm:flex-row dark:text-gray-400">
-              <span>© {currentYear} Mar1shell</span>
+              <span>
+                © {currentYear}{" "}
+                <a
+                  href="www.github.com/mar1shell"
+                  target="_blank"
+                  className="interactive font-semibold text-gray-900 transition-colors duration-300 hover:text-blue-500 dark:text-white dark:hover:text-green-400"
+                >
+                  Mar1shell
+                </a>
+              </span>
               <span className="hidden sm:inline">•</span>
               <div className="flex items-center gap-1">
                 <span>Crafted with</span>

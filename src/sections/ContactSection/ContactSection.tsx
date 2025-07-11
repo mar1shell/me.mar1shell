@@ -88,8 +88,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="">
-      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <section>
+      <div
+        id="contact-section"
+        className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8"
+      >
         {/* Section Header */}
         <SectionTitle title="Contact Me" />
 
@@ -312,7 +315,7 @@ export default function ContactSection() {
                 </span>
               </div>
               <p className="text-xs leading-relaxed text-gray-600 sm:text-sm dark:text-gray-300">
-                I'm currently available for freelance projects and full-time
+                I'm currently available for freelance projects and other
                 opportunities. Let's discuss how we can work together!
               </p>
             </div>

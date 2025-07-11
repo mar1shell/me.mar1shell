@@ -144,7 +144,7 @@ function FloatingTechnologiesBadge({
 
 export default function ExperienceSection() {
   return (
-    <section className="py-6 md:px-10">
+    <section id="experience-section" className="py-6 md:px-10">
       <div className="mx-auto max-w-7xl px-4">
         <SectionTitle title="Experience" />
 
@@ -173,7 +173,7 @@ export default function ExperienceSection() {
                 >
                   <div className="relative transition-transform duration-500 group-hover:scale-105">
                     {/* Main Card */}
-                    <div className="relative overflow-hidden rounded-xl border-0 bg-white shadow-2xl dark:bg-slate-900">
+                    <div className="relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900">
                       <div className="p-8">
                         {/* Company Logo & Header */}
                         <div className="mb-6 flex items-center gap-4">
@@ -230,6 +230,9 @@ export default function ExperienceSection() {
 
                     {/* Glow Effect */}
                     <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-blue-400/20 to-cyan-500/20 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100 dark:from-green-400/20 dark:to-emerald-500/20"></div>
+
+                    {/* Outline Effect */}
+                    <div className="absolute inset-0 -z-10 rounded-xl border-2 border-blue-400/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:border-green-400/30"></div>
                   </div>
                 </div>
 

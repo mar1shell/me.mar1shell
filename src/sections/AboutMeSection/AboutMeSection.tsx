@@ -4,7 +4,10 @@ import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
 
 export default function AboutMeSection() {
   return (
-    <section className="flex flex-col items-center justify-center px-4 py-6">
+    <section
+      id="about-me-section"
+      className="flex flex-col items-center justify-center px-4 py-6"
+    >
       <SectionTitle title="About Me" />
       <motion.div
         initial={{ opacity: 0, y: 50 }}

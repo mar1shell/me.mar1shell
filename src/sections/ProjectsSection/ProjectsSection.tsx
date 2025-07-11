@@ -10,7 +10,7 @@ export default function ProjectsSection({
   className = "",
 }: ProjectsSectionProps) {
   return (
-    <section className={`py-6 md:px-10 ${className}`}>
+    <section id="projects-section" className={`py-6 md:px-10 ${className}`}>
       <SectionTitle title="Projects" />
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-16">

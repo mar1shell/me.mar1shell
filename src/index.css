@@ -9,3 +9,7 @@
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
+
+html {
+  scroll-behavior: smooth;
+}

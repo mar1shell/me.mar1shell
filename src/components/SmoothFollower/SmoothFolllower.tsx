@@ -95,7 +95,7 @@ export default function SmoothFollower() {
   if (typeof window === "undefined") return null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-1000 hidden sm:block">
+    <div className="pointer-events-none fixed inset-0 z-2000 hidden sm:block">
       {/* small circle */}
       <div
         className="absolute rounded-full bg-black dark:bg-white"
