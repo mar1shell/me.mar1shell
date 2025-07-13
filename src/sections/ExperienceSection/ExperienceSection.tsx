@@ -10,9 +10,10 @@ import {
   Eye,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
 import { experiences } from "../../utils/data";
+import { createPortal } from "react-dom";
 
 // Technologies Modal Component
 function TechnologiesModal({
@@ -28,15 +29,12 @@ function TechnologiesModal({
 }) {
   if (!isOpen) return null;
 
-  return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
-        onClick={onClose}
-      >
+  return createPortal(
+    <div
+      className="fixed inset-0 z-2000 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <AnimatePresence>
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -91,8 +89,9 @@ function TechnologiesModal({
             </div>
           </div>
         </motion.div>
-      </motion.div>
-    </AnimatePresence>
+      </AnimatePresence>
+    </div>,
+    document.body,
   );
 }
 
