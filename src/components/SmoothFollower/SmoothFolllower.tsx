@@ -2,16 +2,13 @@ import { useState, useEffect, useRef } from "react";
 
 export default function SmoothFollower() {
   const mousePosition = useRef({ x: 0, y: 0 });
-
   const dotPosition = useRef({ x: 0, y: 0 });
   const borderDotPosition = useRef({ x: 0, y: 0 });
-
   const [renderPos, setRenderPos] = useState({
     dot: { x: 0, y: 0 },
     border: { x: 0, y: 0 },
   });
   const [isHovering, setIsHovering] = useState(false);
-
   const DOT_SMOOTHNESS = 0.2;
   const BORDER_DOT_SMOOTHNESS = 0.1;
 
@@ -19,7 +16,6 @@ export default function SmoothFollower() {
     const handleMouseMove = (e: MouseEvent) => {
       mousePosition.current = { x: e.clientX, y: e.clientY };
     };
-
     const handleMouseEnter = () => setIsHovering(true);
     const handleMouseLeave = () => setIsHovering(false);
 
@@ -28,7 +24,6 @@ export default function SmoothFollower() {
 
     // Select all interactive elements
     // This includes links, buttons, inputs, textareas, and elements with the 'interactive' class
-
     const interactiveElements = document.querySelectorAll(
       "a, button, input, textarea, .interactive",
     );
