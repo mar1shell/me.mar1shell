@@ -32,42 +32,52 @@ export default function ProjectsSection({
                   }}
                 >
                   <div className="relative transition-transform duration-500 group-hover:scale-105">
-                    {/* Laptop Mockup */}
-                    <div className="relative rounded-t-xl bg-gray-800 p-2 shadow-2xl">
-                      {/* Laptop Header */}
-                      <div className="mb-2 flex items-center space-x-2">
-                        <div className="h-3 w-3 rounded-full bg-red-500"></div>
-                        <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                        <div className="h-3 w-3 rounded-full bg-green-500"></div>
-                      </div>
-
-                      {/* Laptop Screen */}
-                      <div className="aspect-video overflow-hidden rounded-lg bg-white dark:bg-slate-900">
-                        <img
-                          src={project.imageDesktop || "/placeholder.svg"}
-                          alt={project.title}
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Laptop Base */}
-                    <div className="h-4 rounded-b-xl bg-gray-700 shadow-lg"></div>
-
-                    {/* Mobile Mockup */}
-                    <div
-                      className={`absolute ${index % 2 === 1 ? "-left-6 lg:-left-12" : "-right-6 lg:-right-12"} -bottom-6 w-20 lg:w-24`}
+                    <a
+                      href={
+                        project.liveDemo ||
+                        project.sourceCode ||
+                        "https://github.com/mar1shell"
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <div className="rounded-2xl bg-gray-800 p-1 shadow-xl">
-                        <div className="aspect-[9/16] overflow-hidden rounded-xl bg-white dark:bg-slate-900">
+                      {/* Laptop Mockup */}
+                      <div className="relative rounded-t-xl bg-gray-800 p-2 shadow-2xl">
+                        {/* Laptop Header */}
+                        <div className="mb-2 flex items-center space-x-2">
+                          <div className="h-3 w-3 rounded-full bg-red-500"></div>
+                          <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
+                          <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                        </div>
+
+                        {/* Laptop Screen */}
+                        <div className="aspect-video overflow-hidden rounded-lg bg-white dark:bg-slate-900">
                           <img
-                            src={project.imageMobile || "/placeholder.svg"}
-                            alt={`${project.title} mobile`}
+                            src={project.imageDesktop || "/placeholder.svg"}
+                            alt={project.title}
                             className="h-full w-full object-cover"
                           />
                         </div>
                       </div>
-                    </div>
+
+                      {/* Laptop Base */}
+                      <div className="h-4 rounded-b-xl bg-gray-700 shadow-lg"></div>
+
+                      {/* Mobile Mockup */}
+                      <div
+                        className={`absolute ${index % 2 === 1 ? "-left-6 lg:-left-12" : "-right-6 lg:-right-12"} -bottom-6 w-20 lg:w-24`}
+                      >
+                        <div className="rounded-2xl bg-gray-800 p-1 shadow-xl">
+                          <div className="aspect-[9/16] overflow-hidden rounded-xl bg-white dark:bg-slate-900">
+                            <img
+                              src={project.imageMobile || "/placeholder.svg"}
+                              alt={`${project.title} mobile`}
+                              className="h-full w-full object-cover"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </a>
 
                     {/* Glow Effect */}
                     <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-green-400/20 to-emerald-500/20 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100"></div>

@@ -60,6 +60,24 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 0,
+    title: "MonClavier - Moroccan Online Keyboard Store",
+    description:
+      "A modern e-commerce platform for selling laptop keyboards in Morocco. Built with React, TypeScript, and Express.js, featuring a responsive design and smooth user experience for browsing and purchasing keyboard products. Developed as a freelance project for a client.",
+    imageDesktop: "/images/projects/monclavier/desktop.png",
+    imageMobile: "/images/projects/monclavier/mobile.png",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Express.js",
+      "Node.js",
+    ],
+    liveDemo: "https://monclavier.mar1shell.me",
+    featured: true,
+    unfinished: true,
+  },
+  {
     id: 1,
     title: "Finex - Financial Management App",
     description:
@@ -146,24 +164,28 @@ const experiences: Experience[] = [
       "https://www.linkedin.com/company/try-outlier/posts/?feedView=all",
   },
   {
-    title: "Fullstack Developer Intern",
+    title: "Software Engineering Intern",
     company:
       "ONEE - BE Casablanca (National Office of Electricity and Drinking Water)",
     logo: "/images/experiences/onee.jpeg",
     location: "Casablanca, Morocco",
     period: "Summer 2025",
-    duration: "1 months",
+    duration: "1 month",
     type: "Internship",
     description:
-      "Upcoming internship focused on developing energy management systems and infrastructure solutions for Morocco's national electricity network.",
-    achievements: [],
+      "Developed a full-stack recruitment management platform for external use at ONEE where candidates can view job offers, submit applications, and track their application status throughout the hiring process.",
+    achievements: [
+      "Built a complete full-stack web application using React and Express.js",
+      "Collaborated with the DSI – Commercial IS Division to gather functional requirements",
+    ],
     skills: [
-      "Python",
-      "Data Analysis",
-      "Energy Systems",
-      "Database Management",
+      "React",
+      "Express.js",
+      "RESTful APIs",
+      "Full-Stack Development",
+      "Software Engineering",
+      "Team Collaboration",
       "System Architecture",
-      "Project Planning",
     ],
     current: true,
     featured: false,
