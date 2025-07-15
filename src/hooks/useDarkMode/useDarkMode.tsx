@@ -4,7 +4,9 @@ import useLocalStorage from "../useLocalStorage/useLocalStorage";
 export default function useDarkMode() {
   const [isDarkMode, setDarkMode] = useLocalStorage<boolean>(
     "dark-theme",
-    false,
+    typeof window !== "undefined"
+      ? document.documentElement.classList.contains("dark")
+      : false,
   );
 
   useEffect(() => {

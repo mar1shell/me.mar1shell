@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "motion/react";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
@@ -98,19 +97,7 @@ export default function ContactSection() {
 
         <div className="grid grid-cols-1 items-start gap-8 sm:gap-12 lg:gap-16">
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{
-              duration: 0.5,
-              type: "spring",
-              stiffness: 50,
-              ease: "easeInOut",
-              delay: 0.1,
-            }}
-            className="order-2"
-          >
+          <div data-aos="fade-up">
             <div className="relative">
               {/* Form Card */}
               <div className="relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-xl sm:rounded-2xl sm:shadow-2xl dark:border-slate-700 dark:bg-slate-900">
@@ -285,41 +272,9 @@ export default function ContactSection() {
                     )}
                   </form>
                 </div>
-
-                {/* Decorative gradient */}
-                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-400/5 to-cyan-500/5 dark:from-green-400/5 dark:to-emerald-500/5"></div>
               </div>
             </div>
-          </motion.div>
-
-          {/* Contact Info & Social */}
-          <motion.div
-            className="order-1 space-y-6 sm:space-y-8"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{
-              duration: 0.5,
-              type: "spring",
-              stiffness: 50,
-              ease: "easeInOut",
-              delay: 0.2,
-            }}
-          >
-            {/* Availability Status */}
-            <div className="rounded-xl border border-blue-200/50 bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:rounded-2xl sm:p-6 dark:border-green-400/20 dark:from-green-900/20 dark:to-emerald-900/20">
-              <div className="mb-2 flex items-center gap-2 sm:mb-3 sm:gap-3">
-                <div className="h-2.5 w-2.5 flex-shrink-0 animate-pulse rounded-full bg-green-500 sm:h-3 sm:w-3"></div>
-                <span className="text-sm font-semibold text-gray-900 sm:text-base dark:text-white">
-                  Available for work
-                </span>
-              </div>
-              <p className="text-xs leading-relaxed text-gray-600 sm:text-sm dark:text-gray-300">
-                I'm currently available for freelance projects and other
-                opportunities. Let's discuss how we can work together!
-              </p>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

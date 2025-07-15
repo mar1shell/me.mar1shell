@@ -1,10 +1,6 @@
 import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
 import { projects } from "../../utils/data";
-import { motion } from "motion/react";
-
-interface ProjectsSectionProps {
-  className?: string;
-}
+import type { ProjectsSectionProps } from "../../types";
 
 export default function ProjectsSection({
   className = "",
@@ -18,18 +14,9 @@ export default function ProjectsSection({
             <div key={project.id} className={`group relative`}>
               <div className="items-center gap-16 lg:grid lg:grid-cols-2">
                 {/* Project Mockup */}
-                <motion.div
+                <div
                   className={`relative mb-8 lg:mb-0 ${index % 2 === 1 ? "lg:order-2" : "lg:order-1"}`}
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{
-                    duration: 0.5,
-                    type: "spring",
-                    stiffness: 50,
-                    ease: "easeInOut",
-                    delay: 0.2,
-                  }}
+                  data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                 >
                   <div className="relative transition-transform duration-500 group-hover:scale-105">
                     <a
@@ -82,21 +69,12 @@ export default function ProjectsSection({
                     {/* Glow Effect */}
                     <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-green-400/20 to-emerald-500/20 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100"></div>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Project Info */}
-                <motion.div
+                <div
                   className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{
-                    duration: 0.5,
-                    type: "spring",
-                    stiffness: 50,
-                    ease: "easeInOut",
-                    delay: 0.2,
-                  }}
+                  data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
                 >
                   {/* Project Tags */}
                   <div className="flex flex-wrap items-center gap-2">
@@ -188,25 +166,13 @@ export default function ProjectsSection({
                       </a>
                     )}
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
           ))}
         </div>
         {/* More Projects Button */}
-        <motion.div
-          className="mt-25 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{
-            duration: 0.5,
-            type: "spring",
-            stiffness: 50,
-            ease: "easeInOut",
-            delay: 0.3,
-          }}
-        >
+        <div className="mt-25 text-center" data-aos="fade-up">
           <a
             href="https://github.com/mar1shell"
             target="_blank"
@@ -235,7 +201,7 @@ export default function ProjectsSection({
               />
             </svg>
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

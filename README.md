@@ -93,6 +93,7 @@ me.mar1shell/
 ### **Tools & Libraries**
 
 - **React Router** - Client-side routing
+- **AOS** - Animate on Scroll Library
 - **Framer Motion** - Advanced animations
 - **EmailJS** - Contact form integration
 - **React Icons** - Consistent iconography
@@ -103,9 +104,9 @@ me.mar1shell/
 
 ## 📸 Screenshots
 
-| Desktop                                     | Mobile                                    |
-| ------------------------------------------- | ----------------------------------------- |
-| ![Desktop View](link-to-desktop-screenshot) | ![Mobile View](link-to-mobile-screenshot) |
+| Desktop                                                                                 | Mobile                                                                                |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| ![Desktop View](https://github.com/mar1shell/me.mar1shell/blob/main/public/desktop.png) | ![Mobile View](https://github.com/mar1shell/me.mar1shell/blob/main/public/mobile.png) |
 
 ## 🤝 Contributing
 

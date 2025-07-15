@@ -3,143 +3,13 @@ import {
   MapPin,
   ExternalLink,
   Users,
-  Code,
   Award,
   ChevronRight,
-  X,
-  Eye,
 } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
-import { useState, useEffect } from "react";
+
 import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
 import { experiences } from "../../utils/data";
-import { createPortal } from "react-dom";
-
-// Technologies Modal Component
-function TechnologiesModal({
-  isOpen,
-  onClose,
-  technologies,
-  companyName,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-  technologies: string[];
-  companyName: string;
-}) {
-  if (!isOpen) return null;
-
-  return createPortal(
-    <div
-      className="fixed inset-0 z-2000 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
-      onClick={onClose}
-    >
-      <AnimatePresence>
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="relative max-h-[80vh] w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-2xl dark:bg-slate-900"
-          onClick={(e) => e.stopPropagation()}
-        >
-          {/* Header */}
-          <div className="flex items-center justify-between border-b border-gray-200 p-6 dark:border-slate-700">
-            <div className="flex items-center gap-3">
-              <Code className="h-6 w-6 text-blue-400 dark:text-green-400" />
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                Technologies at {companyName}
-              </h3>
-            </div>
-            <button
-              onClick={onClose}
-              className="rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-gray-300"
-            >
-              <X className="h-5 w-5" />
-            </button>
-          </div>
-
-          {/* Content */}
-          <div className="max-h-96 overflow-y-auto p-6">
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {technologies.map((tech, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="group relative overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-4 transition-all duration-300 hover:border-blue-400 hover:shadow-md dark:border-slate-700 dark:bg-slate-800 dark:hover:border-green-400"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium text-gray-900 dark:text-white">
-                      {tech}
-                    </span>
-                    <div className="h-2 w-2 rounded-full bg-blue-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-green-400"></div>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 to-cyan-400/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-green-400/5 dark:to-emerald-400/5"></div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="border-t border-gray-200 p-6 dark:border-slate-700">
-            <div className="text-center text-sm text-gray-600 dark:text-gray-400">
-              {technologies.length} technologies used
-            </div>
-          </div>
-        </motion.div>
-      </AnimatePresence>
-    </div>,
-    document.body,
-  );
-}
-
-// Floating Technologies Badge Component
-function FloatingTechnologiesBadge({
-  technologies,
-  companyName,
-}: {
-  technologies: string[];
-  companyName: string;
-}) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  return (
-    <>
-      <button
-        onClick={() => setIsModalOpen(true)}
-        className="group/badge absolute -right-4 -bottom-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-xl transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:shadow-2xl dark:border-slate-700 dark:bg-slate-800 dark:hover:border-green-400"
-      >
-        <div className="flex max-w-32 flex-wrap gap-1">
-          {technologies.slice(0, 3).map((skill, skillIndex) => (
-            <span
-              key={skillIndex}
-              className="rounded-full bg-blue-100 px-2 py-1 text-xs text-blue-700 transition-colors duration-300 group-hover/badge:bg-blue-200 dark:bg-green-900/30 dark:text-green-400 dark:group-hover/badge:bg-green-900/50"
-            >
-              {skill}
-            </span>
-          ))}
-          {technologies.length > 3 && (
-            <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-600 transition-all duration-300 group-hover/badge:bg-blue-100 group-hover/badge:text-blue-700 dark:bg-slate-700 dark:text-gray-400 dark:group-hover/badge:bg-green-900/30 dark:group-hover/badge:text-green-400">
-              <Eye className="h-3 w-3" />+{technologies.length - 3}
-            </span>
-          )}
-        </div>
-
-        {/* Hover indicator */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400/10 to-cyan-400/10 opacity-0 transition-opacity duration-300 group-hover/badge:opacity-100 dark:from-green-400/10 dark:to-emerald-400/10"></div>
-      </button>
-
-      <TechnologiesModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        technologies={technologies}
-        companyName={companyName}
-      />
-    </>
-  );
-}
+import FloatingTechnologiesBadge from "../../components/FloatingTechnologiesBadge";
 
 export default function ExperienceSection() {
   return (
@@ -149,26 +19,14 @@ export default function ExperienceSection() {
 
         <div className="grid gap-16">
           {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              className={`group relative`}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{
-                duration: 0.5,
-                type: "spring",
-                stiffness: 50,
-                ease: "easeInOut",
-                delay: index * 0.1,
-              }}
-            >
+            <div key={index} className={`group relative`}>
               <div
                 className={`items-center gap-16 lg:grid lg:grid-cols-2 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
               >
                 {/* Experience Visual */}
                 <div
                   className={`relative mb-8 lg:mb-0 ${index % 2 === 1 ? "lg:order-2" : "lg:order-1"}`}
+                  data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                 >
                   <div className="relative transition-transform duration-500 group-hover:scale-105">
                     {/* Main Card */}
@@ -238,6 +96,7 @@ export default function ExperienceSection() {
                 {/* Experience Details */}
                 <div
                   className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}
+                  data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
                 >
                   {/* Badges */}
                   <div className="flex flex-wrap gap-3">
@@ -313,7 +172,7 @@ export default function ExperienceSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

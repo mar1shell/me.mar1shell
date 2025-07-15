@@ -1,4 +1,5 @@
 import "./SocialMediaBar.css";
+
 export default function SocialMediaBar() {
   return (
     <div className="social-login-icons">

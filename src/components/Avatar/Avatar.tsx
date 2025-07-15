@@ -1,9 +1,4 @@
-import { motion } from "motion/react";
-
-interface AvatarProps {
-  src?: string;
-  alt?: string;
-}
+import type { AvatarProps } from "../../types";
 
 export default function Avatar({
   src = "/images/avatar.jpeg",
@@ -11,19 +6,8 @@ export default function Avatar({
 }: AvatarProps) {
   return (
     <div className="z-1000 col-span-2 flex items-center justify-center transition">
-      <motion.div
-        initial={{ x: -300, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{
-          duration: 0.8,
-          delay: 0.2,
-          type: "spring",
-          stiffness: 50,
-          damping: 20,
-          ease: "easeOut",
-        }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+      <div
+        data-aos="fade-right"
         className="group interactive relative h-72 w-72 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-teal-400 p-3 shadow-2xl dark:from-teal-400 dark:via-lime-500 dark:to-green-600"
       >
         <img
@@ -38,7 +22,7 @@ export default function Avatar({
         </span>
 
         <span className="pointer-events-none absolute inset-0 rounded-full ring-8 ring-white/20 dark:ring-black/30"></span>
-      </motion.div>
+      </div>
     </div>
   );
 }

@@ -8,11 +8,13 @@ import {
   Facebook,
 } from "lucide-react";
 
-// Hero Section Data
-
-interface HeroCaption {
-  content: string;
-}
+import type {
+  SocialLink,
+  HeroCaption,
+  TerminalData,
+  Project,
+  Experience,
+} from "../types";
 
 const heroCaptions: HeroCaption[] = [
   {
@@ -31,11 +33,7 @@ const heroCaptions: HeroCaption[] = [
   },
 ];
 
-interface TerminalData {
-  username: String;
-  command: String;
-  bio: String;
-}
+// About me section
 
 const terminalData: TerminalData = {
   username: "mar1shell",
@@ -44,19 +42,6 @@ const terminalData: TerminalData = {
 };
 
 // Projects Section Data
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  imageDesktop: string;
-  imageMobile?: string;
-  technologies: string[];
-  liveDemo?: string;
-  sourceCode?: string;
-  featured?: boolean;
-  unfinished?: boolean;
-}
 
 const projects: Project[] = [
   {
@@ -112,23 +97,6 @@ const projects: Project[] = [
 ];
 
 // Experience Section Data
-
-type Experience = {
-  title: string;
-  company: string;
-  logo: string;
-  location: string;
-  period: string;
-  duration: string;
-  type: string;
-  description: string;
-  achievements: string[];
-  skills: string[];
-  current: boolean;
-  featured: boolean;
-  detailsLink: string;
-  connectLink: string;
-};
 
 const experiences: Experience[] = [
   {
@@ -224,7 +192,8 @@ const experiences: Experience[] = [
 ];
 
 // Footer Section Data
-const socialLinks = [
+
+const socialLinks: SocialLink[] = [
   {
     icon: Github,
     label: "GitHub",

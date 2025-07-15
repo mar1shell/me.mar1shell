@@ -1,11 +1,4 @@
-import type { JSX } from "react";
-
-interface TerminalTemplateProps {
-  username?: string;
-  command?: string;
-  bio?: string | JSX.Element;
-  className?: string;
-}
+import type { TerminalTemplateProps } from "../../types";
 
 export default function TerminalTemplate({
   username = "mar1shell",
