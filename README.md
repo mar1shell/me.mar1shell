@@ -122,9 +122,9 @@ While this is a personal portfolio, I welcome feedback and suggestions! Feel fre
 
 **Let's connect and build something amazing together!**
 
-- 📧 Email: your.email@example.com
-- 💼 LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- 🐙 GitHub: [Your GitHub Profile](https://github.com/yourusername)
+- 📧 Email: elhamdaouimar1@gmail.com
+- 💼 LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/elhamdaouimarouane)
+- 🐙 GitHub: [Your GitHub Profile](https://github.com/mar1shell)
 
 ## 📄 License
 
