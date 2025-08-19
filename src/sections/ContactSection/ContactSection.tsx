@@ -68,7 +68,7 @@ export default function ContactSection() {
       setTimeout(() => {
         setSubmitStatus("idle");
       }, 5000);
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);

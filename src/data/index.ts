@@ -49,7 +49,7 @@ const projects: Project[] = [
     title: "MonClavier - Moroccan Online Keyboard Store",
     description:
       "A modern e-commerce platform for selling laptop keyboards in Morocco. Built with React, TypeScript, and Express.js, featuring a responsive design and smooth user experience for browsing and purchasing keyboard products. Developed as a freelance project for a client.",
-    imageDesktop: "/images/projects/monclavier/desktop.png",
+    imageDesktop: "/images/projects/monclavier/desktop.webp",
     imageMobile: "/images/projects/monclavier/mobile.png",
     technologies: [
       "React",
@@ -67,8 +67,8 @@ const projects: Project[] = [
     title: "Finex - Financial Management App",
     description:
       "A full-stack financial management application to help users track their income, expenses, budgets, and financial goals. Built with React, Tailwind CSS, and Django REST Framework. Includes smooth UI animations and a modern analytics dashboard.",
-    imageDesktop: "/images/projects/finex/desktop.jpg",
-    imageMobile: "/images/projects/finex/mobile.jpg",
+    imageDesktop: "/images/projects/finex/desktop.webp",
+    imageMobile: "/images/projects/finex/mobile.webp",
     technologies: [
       "React",
       "Tailwind CSS",
@@ -86,8 +86,8 @@ const projects: Project[] = [
     title: "Portfolio Website",
     description:
       "A modern, responsive portfolio website built with React, Typescript and Tailwind CSS featuring dark mode and smooth animations.",
-    imageDesktop: "/images/projects/portfolio/desktop.jpg",
-    imageMobile: "/images/projects/portfolio/mobile.jpg",
+    imageDesktop: "/images/projects/portfolio/desktop.webp",
+    imageMobile: "/images/projects/portfolio/mobile.webp",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     liveDemo: "https://mar1shell.me",
     sourceCode: "https://github.com/mar1shell",
@@ -102,7 +102,7 @@ const experiences: Experience[] = [
   {
     title: "Frontend Developer & AI Trainer",
     company: "Outlier AI",
-    logo: "/images/experiences/outlier.png",
+    logo: "/images/experiences/outlier.webp",
     location: "Remote",
     period: "Dec 2024 - Present",
     duration: "2+ months",
@@ -164,7 +164,7 @@ const experiences: Experience[] = [
   {
     title: "Computer Science & AI Student",
     company: "ENSAM Casablanca",
-    logo: "/images/experiences/ensam.png",
+    logo: "/images/experiences/ensam.webp",
     location: "Casablanca, Morocco",
     period: "2022 - Present",
     duration: "2+ years",

@@ -1,5 +1,5 @@
 import { MapPin, Heart } from "lucide-react";
-import { socialLinks, stats } from "../../utils/data";
+import { socialLinks, stats } from "../../data";
 import SocialMediaIcon from "../SocialMediaIcon";
 import Stats from "../Stats";
 import GetInTouchButton from "../GetInTouchButton";

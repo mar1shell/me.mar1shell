@@ -104,9 +104,9 @@ me.mar1shell/
 
 ## 📸 Screenshots
 
-| Desktop                                                                                 | Mobile                                                                                |
-| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| ![Desktop View](https://github.com/mar1shell/me.mar1shell/blob/main/public/desktop.png) | ![Mobile View](https://github.com/mar1shell/me.mar1shell/blob/main/public/mobile.png) |
+| Desktop                                                                                  | Mobile                                                                                 |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| ![Desktop View](https://github.com/mar1shell/me.mar1shell/blob/main/public/desktop.webp) | ![Mobile View](https://github.com/mar1shell/me.mar1shell/blob/main/public/mobile.webp) |
 
 ## 🤝 Contributing
 

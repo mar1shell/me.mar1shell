@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
-import { experiences } from "../../utils/data";
+import { experiences } from "../../data";
 import FloatingTechnologiesBadge from "../../components/FloatingTechnologiesBadge";
 
 export default function ExperienceSection() {
@@ -37,12 +37,7 @@ export default function ExperienceSection() {
                           <div className="relative">
                             <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl bg-gray-100 p-1 dark:bg-slate-800">
                               <img
-                                src={
-                                  exp.logo ||
-                                  "/placeholder.svg?height=40&width=40&query=company logo" ||
-                                  "/placeholder.svg" ||
-                                  "/placeholder.svg"
-                                }
+                                src={exp.logo}
                                 alt={`${exp.company} logo`}
                                 width="40"
                                 height="40"

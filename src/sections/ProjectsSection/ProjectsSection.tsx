@@ -1,5 +1,5 @@
 import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
-import { projects } from "../../utils/data";
+import { projects } from "../../data";
 import type { ProjectsSectionProps } from "../../types";
 
 export default function ProjectsSection({
