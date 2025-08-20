@@ -1,6 +1,16 @@
-export default function SectionTitle({ title }: { title: string }) {
+export default function SectionTitle({
+  title,
+  delay = 0,
+}: {
+  title: string;
+  delay?: number;
+}) {
   return (
-    <div className="group relative mb-16" data-aos="fade-down">
+    <div
+      className="group relative mb-16"
+      data-aos="fade-down"
+      data-aos-delay={delay}
+    >
       <h2 className="relative cursor-default overflow-hidden text-center text-4xl font-bold text-gray-900 md:text-5xl dark:text-white">
         <span className="relative z-10 transition-colors duration-300 group-hover:text-blue-400 group-hover:dark:text-green-400">
           {title}

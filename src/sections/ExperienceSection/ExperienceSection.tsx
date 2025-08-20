@@ -15,7 +15,7 @@ export default function ExperienceSection() {
   return (
     <section id="experience-section" className="py-6 md:px-10">
       <div className="mx-auto max-w-7xl px-4">
-        <SectionTitle title="Experience" />
+        <SectionTitle title="Experience" delay={300} />
 
         <div className="grid gap-16">
           {experiences.map((exp, index) => (

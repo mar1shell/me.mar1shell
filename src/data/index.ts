@@ -135,7 +135,7 @@ const experiences: Experience[] = [
     title: "Software Engineering Intern",
     company:
       "ONEE - BE Casablanca (National Office of Electricity and Drinking Water)",
-    logo: "/images/experiences/onee.jpeg",
+    logo: "/images/experiences/onee.webp",
     location: "Casablanca, Morocco",
     period: "Summer 2025",
     duration: "1 month",

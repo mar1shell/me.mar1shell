@@ -13,6 +13,11 @@ export default function Avatar({
         <img
           src={src}
           alt={alt}
+          fetchPriority="high"
+          width="288"
+          height="288"
+          loading="eager"
+          decoding="async"
           className="pointer-events-none h-full w-full rounded-full border-8 border-white object-cover shadow-xl"
         />
 

@@ -17,7 +17,7 @@ Welcome to my digital space! This portfolio represents my passion for creating m
 ### Prerequisites
 
 - **Node.js** (v16 or higher)
-- **npm** or **yarn** package manager
+- **npm** package manager
 
 ### Installation & Setup
 
@@ -60,6 +60,7 @@ npm run dev
 - **Vite** - Lightning-fast development and optimized builds
 - **Performance Optimized** - Code splitting and lazy loading
 - **SEO Friendly** - Proper meta tags and semantic HTML
+- **React Compiler** - Utilizes the latest React Compiler features for automatic optimization and improved performance.
 
 ## 📁 Project Architecture
 
@@ -71,6 +72,8 @@ me.mar1shell/
 │   ├── 📁 sections/
 │   ├── 📁 hooks/
 │   ├── 📁 utils/
+│   ├── 📁 data/
+│   ├── 📁 types/
 │   ├── App.tsx
 │   ├── main.tsx
 │   ├── index.css
@@ -94,7 +97,7 @@ me.mar1shell/
 
 - **React Router** - Client-side routing
 - **AOS** - Animate on Scroll Library
-- **Framer Motion** - Advanced animations
+- **Framer Motion** - Advanced animations for the technologies Modal
 - **EmailJS** - Contact form integration
 - **React Icons** - Consistent iconography
 
