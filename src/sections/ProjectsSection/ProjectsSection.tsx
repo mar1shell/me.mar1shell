@@ -1,4 +1,4 @@
-import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { projects } from "../../data";
 import type { ProjectsSectionProps } from "../../types";
 

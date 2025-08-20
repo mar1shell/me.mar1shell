@@ -1,18 +1,24 @@
 import useDarkMode from "../../hooks/useDarkMode/useDarkMode";
 import "./DarkModeSwitch.css";
 
+/**
+ * DarkModeSwitch component for toggling dark mode imported from
+ * https://uiverse.io/RiccardoRapelli/jolly-chicken-91
+ * Thanks to Riccardo Rapelli for the inspiration!
+ * I implemented the custom hook for managing dark mode state.
+ */
 const DarkModeSwitch = () => {
   const [isDarkMode, setDarkMode] = useDarkMode();
 
   return (
-    <label className="switch interactive">
+    <label className="switch interactive" aria-label="Toggle dark mode">
       <input
         id="input"
         type="checkbox"
         checked={isDarkMode}
         onChange={() => setDarkMode((prev) => !prev)}
       />
-      <div className="slider round">
+      <div className="slider round scale-80 md:scale-90">
         <div className="sun-moon">
           <svg id="moon-dot-1" className="moon-dot" viewBox="0 0 100 100">
             <circle cx={50} cy={50} r={50} />

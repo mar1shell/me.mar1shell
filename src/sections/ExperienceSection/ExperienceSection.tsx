@@ -7,7 +7,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { experiences } from "../../data";
 import FloatingTechnologiesBadge from "../../components/FloatingTechnologiesBadge";
 

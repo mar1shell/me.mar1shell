@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({

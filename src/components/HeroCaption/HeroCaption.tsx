@@ -4,7 +4,7 @@ interface props {
 
 export default function HeroCaption({ content }: props) {
   return (
-    <li className="md:text-md mb-2 text-sm text-gray-600 transition-transform duration-300 hover:translate-x-3 dark:text-gray-400">
+    <li className="mb-2 text-sm text-gray-600 transition-transform duration-300 hover:translate-x-3 md:text-base dark:text-gray-400">
       {content}
     </li>
   );

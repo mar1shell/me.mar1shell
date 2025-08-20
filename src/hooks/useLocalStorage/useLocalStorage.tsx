@@ -1,5 +1,12 @@
 import { useState } from "react";
 
+/**
+ * Custom hook for managing local storage.
+ * @param key The key to store the value under.
+ * @type T The type of the value to store.
+ * @param initialValue The initial value to use if no value is found in local storage.
+ * @returns A tuple containing the stored value and a function to update it.
+ */
 function useLocalStorage<T>(
   key: string,
   initialValue: T,
@@ -7,9 +14,9 @@ function useLocalStorage<T>(
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = localStorage.getItem(key);
+
       return item !== null ? (JSON.parse(item) as T) : initialValue;
-    } catch (error) {
-      console.error("Error reading localStorage:", error);
+    } catch {
       return initialValue;
     }
   });
@@ -20,8 +27,8 @@ function useLocalStorage<T>(
         value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
       localStorage.setItem(key, JSON.stringify(valueToStore));
-    } catch (error) {
-      console.error("Error writing to localStorage:", error);
+    } catch {
+      // Ignore write errors
     }
   };
 

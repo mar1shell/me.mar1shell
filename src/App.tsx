@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import SmoothFollower from "./components/SmoothFollower/SmoothFolllower";
 import NavBar from "./components/NavBar/NavBar";
 import HeroSection from "./sections/HeroSection/HeroSection";
@@ -8,16 +7,10 @@ import ExperienceSection from "./sections/ExperienceSection/ExperienceSection";
 import ContactSection from "./sections/ContactSection/ContactSection";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import useAosEffect from "./hooks/useAosEffect/useAosEffect";
 
 function App() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
+  useAosEffect();
 
   return (
     <>

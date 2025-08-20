@@ -1,5 +1,11 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import useLocalStorage from "../useLocalStorage/useLocalStorage";
+
+/**
+ * Custom hook for managing dark mode state.
+ * uses useLocalStorage to persist the dark mode state across sessions.
+ * @returns [isDarkMode, setDarkMode]
+ */
 
 export default function useDarkMode() {
   const [isDarkMode, setDarkMode] = useLocalStorage<boolean>(
@@ -9,11 +15,12 @@ export default function useDarkMode() {
       : false,
   );
 
-  useEffect(() => {
+  // Apply changes before paint (prevents flicker)
+  useLayoutEffect(() => {
     if (isDarkMode) {
-      document.body.classList.add("dark");
+      document.documentElement.classList.add("dark");
     } else {
-      document.body.classList.remove("dark");
+      document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode]);
 

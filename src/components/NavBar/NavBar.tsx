@@ -4,13 +4,14 @@ import useScrollTop from "../../hooks/useScrollTop/useScrollTop";
 
 export default function NavBar() {
   const [showNav, isNavTop] = useScrollTop();
+
   return (
     <nav
-      className={`z-2000 ${showNav ? "translate-y-0" : "-translate-y-full"} ${isNavTop ? "py-2" : ""} fixed top-0 left-0 flex w-full items-center justify-between bg-gray-200/10 px-10 shadow backdrop-blur-lg transition-all duration-300 md:px-30 dark:bg-gray-700/10`}
+      className={`z-2000 ${showNav ? "translate-y-0" : "-translate-y-full"} ${isNavTop ? "" : "bg-gray-200/40 dark:bg-gray-700/30"} fixed top-0 left-0 flex w-full items-center justify-between px-10 py-2 shadow backdrop-blur-lg transition-all duration-300 md:px-30`}
     >
       <a
-        href="#"
-        className="interactive flex items-center px-4 py-2 text-5xl font-bold text-gray-800 dark:text-white"
+        href="/"
+        className="interactive flex items-center text-4xl font-bold text-gray-800 md:text-5xl dark:text-white"
       >
         M1
       </a>

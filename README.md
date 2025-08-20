@@ -18,6 +18,7 @@ Welcome to my digital space! This portfolio represents my passion for creating m
 
 - **Node.js** (v16 or higher)
 - **npm** package manager
+- **emailjs-com** (for email sending functionality) you need to create an account and obtain your API keys, there's a free tier available. Add your API keys to the `.env` file.
 
 ### Installation & Setup
 
@@ -80,6 +81,7 @@ me.mar1shell/
 │   └── vite-env.d.ts
 ├── 📄 vite.config.ts
 ... # Other configuration files
+├── 📄 .env # Add your emailjs-com API keys here (VITE_EMAILJS_USER_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_SERVICE_ID)
 └── 📄 README.md
 ```
 

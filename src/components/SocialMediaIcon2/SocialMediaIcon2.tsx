@@ -1,6 +1,6 @@
 import type { SocialLink } from "../../types";
 
-function SocialMediaIcon({
+function SocialMediaIcon2({
   social,
   index,
 }: {
@@ -27,4 +27,4 @@ function SocialMediaIcon({
   );
 }
 
-export default SocialMediaIcon;
+export default SocialMediaIcon2;

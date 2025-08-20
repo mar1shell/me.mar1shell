@@ -1,6 +1,6 @@
 import { MapPin, Heart } from "lucide-react";
 import { socialLinks, stats } from "../../data";
-import SocialMediaIcon from "../SocialMediaIcon";
+import SocialMediaIcon2 from "../SocialMediaIcon2/SocialMediaIcon2";
 import Stats from "../Stats";
 import GetInTouchButton from "../GetInTouchButton";
 
@@ -44,7 +44,7 @@ export default function Footer() {
           {/* Social Links */}
           <div className="mb-12 flex justify-center gap-4">
             {socialLinks.map((social, index) => (
-              <SocialMediaIcon key={index} social={social} index={index} />
+              <SocialMediaIcon2 key={index} social={social} index={index} />
             ))}
           </div>
 

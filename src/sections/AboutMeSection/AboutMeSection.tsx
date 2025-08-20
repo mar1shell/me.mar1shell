@@ -1,5 +1,6 @@
 import TerminalTemplate from "../../components/TerminalTemplate/TerminalTemplate";
-import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import { terminalData } from "../../data";
 
 export default function AboutMeSection() {
   return (
@@ -9,7 +10,7 @@ export default function AboutMeSection() {
     >
       <SectionTitle title="About Me" />
       <div data-aos="fade-up" className="w-full">
-        <TerminalTemplate />
+        <TerminalTemplate {...terminalData} />
       </div>
     </section>
   );

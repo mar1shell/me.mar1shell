@@ -11,10 +11,8 @@ export default function SectionTitle({
       data-aos="fade-down"
       data-aos-delay={delay}
     >
-      <h2 className="relative cursor-default overflow-hidden text-center text-4xl font-bold text-gray-900 md:text-5xl dark:text-white">
-        <span className="relative z-10 transition-colors duration-300 group-hover:text-blue-400 group-hover:dark:text-green-400">
-          {title}
-        </span>
+      <h2 className="relative z-10 cursor-default overflow-hidden text-center text-3xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-blue-400 md:text-4xl dark:text-white group-hover:dark:text-green-400">
+        {title}
       </h2>
 
       {/* Side decorative lines */}

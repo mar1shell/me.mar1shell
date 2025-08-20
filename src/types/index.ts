@@ -19,12 +19,20 @@ interface HeroCaption {
   content: string;
 }
 
+interface SocialMediaIconProps {
+  link: string;
+  title: string;
+  icon: React.ReactNode;
+  hoveredIcon: React.ReactNode;
+  index: number;
+}
+
 // about me section
 
 interface TerminalTemplateProps {
-  username?: string;
-  command?: string;
-  bio?: string | JSX.Element;
+  username: string;
+  command: string;
+  bio: string | JSX.Element;
   className?: string;
 }
 
@@ -99,4 +107,5 @@ export type {
   Project,
   HeroCaption,
   TerminalData,
+  SocialMediaIconProps,
 };
