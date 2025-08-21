@@ -7,16 +7,15 @@ function ProjectsSection() {
   return (
     <section id="projects-section" className="max-w-5xl px-4 py-6">
       <SectionTitle title="Projects" />
-      <div className="mx-auto">
-        <div className="grid gap-16">
-          {projects.map((project, index) => (
-            <ProjectCard project={project} key={project.id} index={index} />
-          ))}
-        </div>
 
-        {/* More Projects Button */}
-        <GithubProjectsButton />
+      <div className="grid gap-16">
+        {projects.map((project, index) => (
+          <ProjectCard project={project} key={project.id} index={index} />
+        ))}
       </div>
+
+      {/* More Projects Button */}
+      <GithubProjectsButton />
     </section>
   );
 }

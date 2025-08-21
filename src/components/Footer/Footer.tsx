@@ -1,7 +1,7 @@
 import { personalInfo, socialMediaIcons2, stats } from "../../data";
 import { HeartIcon, MapPinIcon } from "../../icons";
 import SocialMediaIcon2 from "../SocialMediaIcon2/SocialMediaIcon2";
-import Stats from "../Stats";
+import Stats from "../Stats/Stats";
 import GetInTouchButton from "../GetInTouchButton";
 
 function Footer() {

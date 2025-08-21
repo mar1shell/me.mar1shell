@@ -3,7 +3,7 @@ import { ArrowRightIcon, GithubMoreProjectsIcon } from "../../icons";
 
 function GithubProjectsButton() {
   return (
-    <div className="my-20 text-center" data-aos="fade-up">
+    <div className="pt-10 text-center" data-aos="fade-up">
       <a
         href={personalInfo.socialMedia.github}
         target="_blank"

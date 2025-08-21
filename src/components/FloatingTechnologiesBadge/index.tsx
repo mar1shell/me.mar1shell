@@ -16,7 +16,7 @@ function FloatingTechnologiesBadge({
     <>
       <button
         onClick={() => setIsModalOpen(true)}
-        className="group/badge absolute -right-4 -bottom-4 rounded-2xl border border-gray-200 bg-white p-3 shadow-xl transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:shadow-2xl dark:border-slate-700 dark:bg-slate-800 dark:hover:border-green-400"
+        className="group/badge absolute -right-4 -bottom-4 cursor-pointer rounded-2xl border border-gray-200 bg-white p-3 shadow-xl transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:shadow-2xl dark:border-slate-700 dark:bg-slate-800 dark:hover:border-green-400"
       >
         <div className="flex max-w-32 flex-wrap gap-1">
           {technologies.slice(0, 3).map((skill, skillIndex) => (
