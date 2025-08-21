@@ -31,7 +31,7 @@ function TechnologiesModal({
             {/* Header */}
             <div className="flex items-center justify-between border-b border-gray-200 p-6 dark:border-slate-700">
               <div className="flex items-center gap-3">
-                <CodeIcon />
+                {CodeIcon()}
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   Technologies at {companyName}
                 </h3>
