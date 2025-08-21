@@ -9,7 +9,7 @@ export default function ExperienceSection() {
 
       <div className="grid gap-16">
         {experiences.map((exp, index) => (
-          <ExperienceCard experience={exp} index={index} />
+          <ExperienceCard experience={exp} key={exp.title} index={index} />
         ))}
       </div>
     </section>

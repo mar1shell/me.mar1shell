@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { FloatingTechnologiesBadgeProps } from "../../types";
-import TechnologiesModal from "../TechnologiesModal";
+import TechnologiesModal from "../TechnologiesModal/TechnologiesModal";
 import { EyeIcon } from "../../icons";
 import useNoScrollEffect from "../../hooks/useNoScrollEffect/useNoScrollEffect";
 

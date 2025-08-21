@@ -7,7 +7,7 @@ import {
   UsersIcon,
 } from "../../icons";
 import type { ExperienceCardProps } from "../../types";
-import FloatingTechnologiesBadge from "../FloatingTechnologiesBadge";
+import FloatingTechnologiesBadge from "../FloatingTechnologiesBadge/FloatingTechnologiesBadge";
 import ActionButton from "../ActionButton/ActionButton";
 
 function ExperienceCard({ experience, index }: ExperienceCardProps) {

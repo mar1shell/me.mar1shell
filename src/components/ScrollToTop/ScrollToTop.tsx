@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import { ArrowUpIcon } from "../../icons";
 
-export default function ScrollToTop() {
+function ScrollToTop() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const ticking = useRef(false);
 
@@ -39,3 +39,5 @@ export default function ScrollToTop() {
     </button>
   );
 }
+
+export default ScrollToTop;

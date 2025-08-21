@@ -106,7 +106,7 @@ interface TechnologiesModalProps {
 // Footer
 
 type SocialLink = {
-  icon: JSX.ElementType;
+  icon: () => JSX.Element;
   label: string;
   href: string;
   color: string;

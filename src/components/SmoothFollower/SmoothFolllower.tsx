@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function SmoothFollower() {
+function SmoothFollower() {
   const mousePosition = useRef({ x: 0, y: 0 });
   const dotPosition = useRef({ x: 0, y: 0 });
   const borderDotPosition = useRef({ x: 0, y: 0 });
@@ -117,3 +117,5 @@ export default function SmoothFollower() {
     </div>
   );
 }
+
+export default SmoothFollower;

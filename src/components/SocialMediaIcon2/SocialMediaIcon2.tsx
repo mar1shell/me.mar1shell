@@ -15,7 +15,7 @@ function SocialMediaIcon2({
         rel="noopener noreferrer"
         className={`group relative rounded-2xl border border-gray-200/50 bg-white/70 p-4 text-gray-600 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:rotate-3 active:scale-95 dark:border-slate-700/50 dark:bg-slate-800/70 dark:text-gray-400 ${social.color} ${social.bgColor}`}
       >
-        <social.icon className="h-6 w-6" />
+        <social.icon />
         <span className="sr-only">{social.label}</span>
 
         {/* Tooltip */}

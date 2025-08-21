@@ -1,13 +1,3 @@
-import {
-  Github,
-  Linkedin,
-  Instagram,
-  Code,
-  Users,
-  Zap,
-  Twitter,
-} from "lucide-react";
-
 import type {
   SocialLink,
   HeroCaption,
@@ -16,6 +6,15 @@ import type {
   Experience,
   SocialMediaIconProps,
 } from "../types";
+import {
+  CodeIcon,
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
+  UsersIcon,
+  ZapIcon,
+} from "../icons";
 
 // General
 
@@ -339,28 +338,28 @@ const experiences: Experience[] = [
 
 const socialMediaIcons2: SocialLink[] = [
   {
-    icon: Github,
+    icon: GithubIcon,
     label: "GitHub",
     href: personalInfo.socialMedia.github,
     color: "hover:text-gray-900 dark:hover:text-white",
     bgColor: "hover:bg-gray-900/10 dark:hover:bg-white/10",
   },
   {
-    icon: Linkedin,
+    icon: LinkedinIcon,
     label: "LinkedIn",
     href: personalInfo.socialMedia.linkedin,
     color: "hover:text-blue-600 dark:hover:text-blue-400",
     bgColor: "hover:bg-blue-600/10 dark:hover:bg-blue-400/10",
   },
   {
-    icon: Twitter,
+    icon: TwitterIcon,
     label: "Facebook",
     href: personalInfo.socialMedia.twitter,
     color: "hover:text-blue-400 dark:hover:text-blue-300",
     bgColor: "hover:bg-blue-400/10 dark:hover:bg-blue-300/10",
   },
   {
-    icon: Instagram,
+    icon: InstagramIcon,
     label: "Instagram",
     href: personalInfo.socialMedia.instagram,
     color: "hover:text-pink-500 dark:hover:text-pink-400",
@@ -370,19 +369,19 @@ const socialMediaIcons2: SocialLink[] = [
 
 const stats = [
   {
-    icon: Code,
+    icon: CodeIcon,
     label: "Lines of Code",
     value: "50K+",
     color: "text-blue-500 dark:text-green-400",
   },
   {
-    icon: Users,
+    icon: UsersIcon,
     label: "Happy Clients",
     value: "2+",
     color: "text-purple-500 dark:text-purple-400",
   },
   {
-    icon: Zap,
+    icon: ZapIcon,
     label: "Projects Built",
     value: "10+",
     color: "text-amber-500 dark:text-yellow-400",
