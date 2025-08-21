@@ -353,7 +353,7 @@ const socialMediaIcons2: SocialLink[] = [
   },
   {
     icon: TwitterIcon,
-    label: "Facebook",
+    label: "X (Twitter)",
     href: personalInfo.socialMedia.twitter,
     color: "hover:text-blue-400 dark:hover:text-blue-300",
     bgColor: "hover:bg-blue-400/10 dark:hover:bg-blue-300/10",

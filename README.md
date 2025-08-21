@@ -2,10 +2,10 @@
 
 > A modern, responsive portfolio website showcasing my journey as a developer
 
-[![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org/)
+[![React](https://img.shields.io/badge/React-19.x-blue.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.x-646CFF.svg)](https://vitejs.dev/)
-[![CSS3](https://img.shields.io/badge/CSS3-Responsive-orange.svg)](https://www.w3.org/Style/CSS/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-Responsive-38B2AC.svg)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## ✨ About
@@ -93,7 +93,7 @@ me.mar1shell/
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
 ### **Tools & Libraries**
 
@@ -101,7 +101,6 @@ me.mar1shell/
 - **AOS** - Animate on Scroll Library
 - **Framer Motion** - Advanced animations for the technologies Modal
 - **EmailJS** - Contact form integration
-- **React Icons** - Consistent iconography
 
 ## 🌐 Live Demo
 
@@ -109,16 +108,16 @@ me.mar1shell/
 
 ## 📸 Screenshots
 
-| Desktop                                                                                  | Mobile                                                                                 |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| ![Desktop View](https://github.com/mar1shell/me.mar1shell/blob/main/public/desktop.webp) | ![Mobile View](https://github.com/mar1shell/me.mar1shell/blob/main/public/mobile.webp) |
+| Desktop                                                                          | Mobile                                                                         |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| ![Desktop View](https://www.mar1shell.me/images/projects/portfolio/desktop.webp) | ![Mobile View](https://www.mar1shell.me/images/projects/portfolio/mobile.webp) |
 
 ## 🤝 Contributing
 
 While this is a personal portfolio, I welcome feedback and suggestions! Feel free to:
 
 1. **Fork** the repository
-2. **Create** a feature branch
+2. **Create** a feature branchhttps://www.mar1shell.me/images/projects/portfolio/desktop.webp
 3. **Commit** your changes
 4. **Push** to the branch
 5. **Open** a Pull Request
@@ -127,9 +126,11 @@ While this is a personal portfolio, I welcome feedback and suggestions! Feel fre
 
 **Let's connect and build something amazing together!**
 
-- 📧 Email: elhamdaouimar1@gmail.com
-- 💼 LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/elhamdaouimarouane)
-- 🐙 GitHub: [Your GitHub Profile](https://github.com/mar1shell)
+- 📧 Email: [elhamdaouimar1@gmail.com](mailto:elhamdaouimar1@gmail.com)
+- 💼 LinkedIn: [EL-HAMDAOUI MAROUANE](https://linkedin.com/in/elhamdaouimarouane)
+- 🐙 GitHub: [mar1shell](https://github.com/mar1shell)
+- 🌐 Portfolio: [mar1shell.me](https://mar1shell.me)
+- 🐦 X (Twitter): [@mar1shell](https://x.com/mar1shell)
 
 ## 📄 License
 
