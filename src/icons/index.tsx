@@ -14,7 +14,7 @@ const ExternalLinkIcon = () => (
   </svg>
 );
 
-const UsersIcon = () => (
+const UsersIcon = (className: string = "") => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -25,7 +25,7 @@ const UsersIcon = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="mr-2 h-5 w-5 transition-transform duration-300 group-hover/btn:rotate-12"
+    className={`h-5 w-5 transition-transform duration-300 group-hover/btn:rotate-12 ${className}`}
   >
     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
     <path d="M16 3.128a4 4 0 0 1 0 7.744" />
@@ -161,7 +161,7 @@ const EyeIcon = () => (
   </svg>
 );
 
-const CodeIcon = () => (
+const CodeIcon = (className: string = "") => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -172,7 +172,7 @@ const CodeIcon = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="h-6 w-6 text-blue-400 dark:text-green-400"
+    className={`h-6 w-6 text-blue-400 dark:text-green-400 ${className}`}
   >
     <path d="m16 18 6-6-6-6" />
     <path d="m8 6-6 6 6 6" />
@@ -376,7 +376,7 @@ const TwitterIcon = () => (
   </svg>
 );
 
-const ZapIcon = () => (
+const ZapIcon = (className: string = "") => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -387,6 +387,7 @@ const ZapIcon = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    className={className}
   >
     <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
   </svg>

@@ -10,7 +10,7 @@ function Stats({ stat, index }: StatsProps) {
         <div
           className={`mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-blue-100 to-cyan-100 transition-transform duration-300 group-hover:scale-110 dark:from-green-900/30 dark:to-emerald-900/30`}
         >
-          <stat.icon className={`h-6 w-6 ${stat.color}`} />
+          {stat.icon(`h-6 w-6 ${stat.color}`)}
         </div>
         <div className="mb-1 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white">
           {stat.value}

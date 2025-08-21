@@ -144,7 +144,7 @@ function ExperienceCard({ experience, index }: ExperienceCardProps) {
           {experience.connectLink !== "" && (
             <ActionButton
               filled={false}
-              icon={<UsersIcon />}
+              icon={UsersIcon()}
               label="connect"
               link={experience.connectLink}
             />

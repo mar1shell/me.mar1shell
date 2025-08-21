@@ -114,7 +114,7 @@ type SocialLink = {
 };
 
 type Stat = {
-  icon: JSX.ElementType;
+  icon: (className?: string) => React.ReactNode;
   label: string;
   value: string;
   color: string;
