@@ -205,7 +205,7 @@ function ContactSection() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group/btn inline-flex w-full items-center justify-center rounded-full bg-blue-400 px-6 py-3 text-sm font-semibold text-gray-900 transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-400/25 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100 sm:px-8 sm:py-4 sm:text-base dark:bg-green-400 dark:hover:bg-green-500"
+              className="group/btn inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-blue-400 px-6 py-3 text-sm font-semibold text-gray-900 transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-400/25 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100 sm:px-8 sm:py-4 sm:text-base dark:bg-green-400 dark:hover:bg-green-500"
             >
               {isSubmitting ? (
                 <>
