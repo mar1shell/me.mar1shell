@@ -1,10 +1,6 @@
-export default function SectionTitle({
-  title,
-  delay = 0,
-}: {
-  title: string;
-  delay?: number;
-}) {
+import type { SectionTitleProps } from "../../types";
+
+function SectionTitle({ title, delay = 0 }: SectionTitleProps) {
   return (
     <div
       className="group relative mb-16"
@@ -24,3 +20,5 @@ export default function SectionTitle({
     </div>
   );
 }
+
+export default SectionTitle;

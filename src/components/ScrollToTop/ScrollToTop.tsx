@@ -1,41 +1,41 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowUp } from "lucide-react";
+import { useEffect, useState, useCallback, useRef } from "react";
+import { ArrowUpIcon } from "../../icons";
 
 export default function ScrollToTop() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const ticking = useRef(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+  const handleScroll = useCallback(() => {
+    if (!ticking.current) {
+      requestAnimationFrame(() => {
+        setShowScrollTop(window.scrollY > 400);
+        ticking.current = false;
+      });
+      ticking.current = true;
+    }
   }, []);
 
-  const scrollToTop = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
+  const scrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  }, []);
 
   return (
-    <motion.button
+    <button
       onClick={scrollToTop}
-      className={`fixed right-8 bottom-8 z-50 rounded-full bg-blue-400 p-3 text-gray-900 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl dark:bg-green-400 ${
+      className={`interactive fixed right-8 bottom-8 z-50 cursor-pointer rounded-full bg-blue-400 p-3 text-gray-900 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl dark:bg-green-400 ${
         showScrollTop
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-10 opacity-0"
       }`}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{
-        opacity: showScrollTop ? 1 : 0,
-        y: showScrollTop ? 0 : 20,
-      }}
-      transition={{ duration: 0.3 }}
     >
-      <ArrowUp className="h-5 w-5" />
+      <ArrowUpIcon />
       <span className="sr-only">Scroll to top</span>
-    </motion.button>
+    </button>
   );
 }

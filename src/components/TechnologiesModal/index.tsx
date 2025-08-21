@@ -1,18 +1,14 @@
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "motion/react";
-import { Code, X } from "lucide-react";
+import { CloseIcon, CodeIcon } from "../../icons";
+import type { TechnologiesModalProps } from "../../types";
 
 function TechnologiesModal({
   isOpen,
   onClose,
   technologies,
   companyName,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-  technologies: string[];
-  companyName: string;
-}) {
+}: TechnologiesModalProps) {
   return createPortal(
     <AnimatePresence>
       {isOpen && (
@@ -35,7 +31,7 @@ function TechnologiesModal({
             {/* Header */}
             <div className="flex items-center justify-between border-b border-gray-200 p-6 dark:border-slate-700">
               <div className="flex items-center gap-3">
-                <Code className="h-6 w-6 text-blue-400 dark:text-green-400" />
+                <CodeIcon />
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   Technologies at {companyName}
                 </h3>
@@ -44,7 +40,7 @@ function TechnologiesModal({
                 onClick={onClose}
                 className="rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-gray-300"
               >
-                <X className="h-5 w-5" />
+                <CloseIcon />
               </button>
             </div>
 

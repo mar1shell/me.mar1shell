@@ -2,7 +2,10 @@ import type { TerminalTemplateProps } from "../../types";
 
 function TerminalTemplate({ username, command, bio }: TerminalTemplateProps) {
   return (
-    <div className="interactive mx-auto max-w-4xl overflow-hidden rounded-lg bg-gray-800 font-mono shadow-2xl dark:bg-gray-200">
+    <div
+      data-aos="fade-up"
+      className="interactive mx-auto overflow-hidden rounded-lg bg-gray-800 font-mono shadow-2xl dark:bg-gray-200"
+    >
       {/* Terminal Header */}
       <div className="flex items-center space-x-2 bg-gray-600 px-4 py-3 dark:bg-gray-400">
         <div className="h-3 w-3 rounded-full bg-red-500"></div>

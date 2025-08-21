@@ -6,7 +6,6 @@ import useLocalStorage from "../useLocalStorage/useLocalStorage";
  * uses useLocalStorage to persist the dark mode state across sessions.
  * @returns [isDarkMode, setDarkMode]
  */
-
 export default function useDarkMode() {
   const [isDarkMode, setDarkMode] = useLocalStorage<boolean>(
     "dark-theme",

@@ -25,7 +25,7 @@ export default function SmoothFollower() {
     // Select all interactive elements
     // This includes links, buttons, inputs, textareas, and elements with the 'interactive' class
     const interactiveElements = document.querySelectorAll(
-      "a, button, input, textarea, .interactive",
+      "a, button, input, textarea, .interactive, button",
     );
     interactiveElements.forEach((element) => {
       element.addEventListener("mouseenter", handleMouseEnter);
@@ -90,7 +90,7 @@ export default function SmoothFollower() {
   if (typeof window === "undefined") return null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-2000 hidden md:block">
+    <div className="pointer-events-none fixed inset-0 z-3000 hidden md:block">
       {/* small circle */}
       <div
         className="absolute rounded-full bg-black dark:bg-white"

@@ -1,10 +1,16 @@
 import type { JSX } from "react";
 
+// General
+
+interface SectionTitleProps {
+  title: string;
+  delay?: number;
+}
+
 // Navbar
 
 interface NavBarLinkProps {
   href: string;
-  className?: string;
   content?: string | JSX.Element;
 }
 
@@ -44,10 +50,6 @@ interface TerminalData {
 
 // projects section
 
-interface ProjectsSectionProps {
-  className?: string;
-}
-
 interface Project {
   id: number;
   title: string;
@@ -60,7 +62,12 @@ interface Project {
   featured?: boolean;
   unfinished?: boolean;
 }
-// EXperinces
+
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+}
+// Experiences
 
 type Experience = {
   title: string;
@@ -79,6 +86,23 @@ type Experience = {
   connectLink: string;
 };
 
+interface ExperienceCardProps {
+  experience: Experience;
+  index: number;
+}
+
+interface FloatingTechnologiesBadgeProps {
+  technologies: string[];
+  companyName: string;
+}
+
+interface TechnologiesModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  technologies: string[];
+  companyName: string;
+}
+
 // Footer
 
 type SocialLink = {
@@ -96,11 +120,15 @@ type Stat = {
   color: string;
 };
 
+interface StatsProps {
+  stat: Stat;
+  index: number;
+}
+
 export type {
   NavBarLinkProps,
   AvatarProps,
   TerminalTemplateProps,
-  ProjectsSectionProps,
   SocialLink,
   Stat,
   Experience,
@@ -108,4 +136,10 @@ export type {
   HeroCaption,
   TerminalData,
   SocialMediaIconProps,
+  SectionTitleProps,
+  ProjectCardProps,
+  ExperienceCardProps,
+  FloatingTechnologiesBadgeProps,
+  TechnologiesModalProps,
+  StatsProps,
 };

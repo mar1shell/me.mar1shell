@@ -2,7 +2,7 @@ import "./SocialMediaBar.css";
 import { SocialMediaIcons } from "../../data";
 import SocialMediaIcon from "../SocialMediaIcon/SocialMediaIcon";
 
-export default function SocialMediaBar() {
+function SocialMediaBar() {
   return (
     <div className="social-login-icons">
       {SocialMediaIcons.map((socialLink, index) => (
@@ -18,3 +18,5 @@ export default function SocialMediaBar() {
     </div>
   );
 }
+
+export default SocialMediaBar;

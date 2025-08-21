@@ -8,7 +8,6 @@ import "aos/dist/aos.css";
  * @param {boolean} once - Whether the animation should happen only once.
  * @param {number} delay - Delay before the animation starts in milliseconds.
  */
-
 function useAosEffect(duration = 1000, once = true, delay = 200) {
   useEffect(() => {
     AOS.init({

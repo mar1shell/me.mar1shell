@@ -7,7 +7,7 @@ import "./DarkModeSwitch.css";
  * Thanks to Riccardo Rapelli for the inspiration!
  * I implemented the custom hook for managing dark mode state.
  */
-const DarkModeSwitch = () => {
+function DarkModeSwitch() {
   const [isDarkMode, setDarkMode] = useDarkMode();
 
   return (
@@ -74,6 +74,6 @@ const DarkModeSwitch = () => {
       </div>
     </label>
   );
-};
+}
 
 export default DarkModeSwitch;

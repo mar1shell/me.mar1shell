@@ -5,7 +5,7 @@ import {
   Code,
   Users,
   Zap,
-  Facebook,
+  Twitter,
 } from "lucide-react";
 
 import type {
@@ -16,6 +16,24 @@ import type {
   Experience,
   SocialMediaIconProps,
 } from "../types";
+
+// General
+
+const personalInfo = {
+  name: "EL-HAMDAOUI MAROUANE ",
+  username: "mar1shell",
+  title: "Software Engineer",
+  email: "elhamdaouimar1@gmail.com",
+  location: "Casablanca, Morocco",
+  website: "https://mar1shell.me",
+  socialMedia: {
+    twitter: "https://x.com/elhamdaouimar1",
+    instagram: "https://www.instagram.com/el_hamdaouimarouane",
+    linkedin: "https://www.linkedin.com/in/elhamdaouimarouane",
+    github: "https://github.com/mar1shell",
+  },
+};
+
 // Hero Section
 
 const heroCaptions: HeroCaption[] = [
@@ -37,7 +55,7 @@ const heroCaptions: HeroCaption[] = [
 
 const SocialMediaIcons: SocialMediaIconProps[] = [
   {
-    link: "https://x.com/elhamdaouimar1",
+    link: personalInfo.socialMedia.twitter,
     title: "Follow me on X (formerly Twitter)",
     icon: (
       <svg
@@ -66,7 +84,7 @@ const SocialMediaIcons: SocialMediaIconProps[] = [
     index: 1,
   },
   {
-    link: "https://www.instagram.com/el_hamdaouimarouane",
+    link: personalInfo.socialMedia.instagram,
     title: "Follow me on Instagram",
     icon: (
       <svg
@@ -95,7 +113,7 @@ const SocialMediaIcons: SocialMediaIconProps[] = [
     index: 2,
   },
   {
-    link: "https://www.github.com/mar1shell",
+    link: personalInfo.socialMedia.github,
     title: "View my GitHub profile",
     icon: (
       <svg
@@ -116,7 +134,7 @@ const SocialMediaIcons: SocialMediaIconProps[] = [
     index: 4,
   },
   {
-    link: "https://www.linkedin.com/in/elhamdaouimarouane/",
+    link: personalInfo.socialMedia.linkedin,
     title: "Connect with me on LinkedIn",
     icon: (
       <svg
@@ -162,7 +180,7 @@ const SocialMediaIcons: SocialMediaIconProps[] = [
 // About me section
 
 const terminalData: TerminalData = {
-  username: "mar1shell",
+  username: personalInfo.username,
   command: "cat aboutmar1.txt",
   bio: "Hey! I'm Marouane, a Computer Science & AI student at ENSAM Casablanca. I love solving LeetCode problems, building fullstack apps, and walking the streets of Casablanca with a playlist full of diverse music. I’m passionate about software engineering, currently diving into backend fundamentals and crafting clean, meaningful code. I also enjoy volunteering, reading the news, and dreaming big. Hire me before I join the Night’s Watch. 😉",
 };
@@ -319,32 +337,32 @@ const experiences: Experience[] = [
 
 // Footer Section Data
 
-const socialLinks: SocialLink[] = [
+const socialMediaIcons2: SocialLink[] = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/mar1shell",
+    href: personalInfo.socialMedia.github,
     color: "hover:text-gray-900 dark:hover:text-white",
     bgColor: "hover:bg-gray-900/10 dark:hover:bg-white/10",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/elhamdaouimarouane",
+    href: personalInfo.socialMedia.linkedin,
     color: "hover:text-blue-600 dark:hover:text-blue-400",
     bgColor: "hover:bg-blue-600/10 dark:hover:bg-blue-400/10",
   },
   {
-    icon: Facebook,
+    icon: Twitter,
     label: "Facebook",
-    href: "https://web.facebook.com/elhamdaouimar1",
+    href: personalInfo.socialMedia.twitter,
     color: "hover:text-blue-400 dark:hover:text-blue-300",
     bgColor: "hover:bg-blue-400/10 dark:hover:bg-blue-300/10",
   },
   {
     icon: Instagram,
     label: "Instagram",
-    href: "https://instagram.com/marouane",
+    href: personalInfo.socialMedia.instagram,
     color: "hover:text-pink-500 dark:hover:text-pink-400",
     bgColor: "hover:bg-pink-500/10 dark:hover:bg-pink-400/10",
   },
@@ -376,7 +394,8 @@ export {
   terminalData,
   projects,
   experiences,
-  socialLinks,
+  socialMediaIcons2,
   stats,
   SocialMediaIcons,
+  personalInfo,
 };
