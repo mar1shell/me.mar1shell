@@ -27,7 +27,7 @@ const personalInfo = {
   location: "Casablanca, Morocco",
   website: "https://mar1shell.me",
   socialMedia: {
-    twitter: "https://x.com/elhamdaouimar1",
+    twitter: "https://x.com/mar1hsell",
     instagram: "https://www.instagram.com/el_hamdaouimarouane",
     linkedin: "https://www.linkedin.com/in/elhamdaouimarouane",
     github: "https://github.com/mar1shell",
