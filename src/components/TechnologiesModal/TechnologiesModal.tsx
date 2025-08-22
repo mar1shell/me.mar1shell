@@ -56,7 +56,7 @@ function TechnologiesModal({
                     className="group relative overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-4 transition-all duration-300 hover:border-blue-400 hover:shadow-md dark:border-slate-700 dark:bg-slate-800 dark:hover:border-green-400"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="font-medium text-gray-900 dark:text-white">
+                      <span className="font-semibold text-gray-900 dark:text-white">
                         {tech}
                       </span>
                       <div className="h-2 w-2 rounded-full bg-blue-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-green-400"></div>
