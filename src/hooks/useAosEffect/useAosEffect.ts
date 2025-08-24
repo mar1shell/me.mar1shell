@@ -8,14 +8,19 @@ import "aos/dist/aos.css";
  * @param {boolean} once - Whether the animation should happen only once.
  * @param {number} delay - Delay before the animation starts in milliseconds.
  */
-function useAosEffect(duration = 1000, once = true, delay = 200) {
+function useAosEffect() {
   useEffect(() => {
     AOS.init({
-      duration,
-      once,
-      delay,
+      duration: 600,
+      easing: "ease-out",
+      once: true, // Only animate once
+      mirror: false, // Don't animate on scroll back
+      throttleDelay: 100, // Throttle scroll events
+      debounceDelay: 50, // Debounce resize events
     });
-  }, [duration, delay, once]);
+
+    return () => AOS.refresh();
+  }, []);
 }
 
 export default useAosEffect;

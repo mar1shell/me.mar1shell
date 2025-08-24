@@ -4,11 +4,12 @@ function SmoothFollower() {
   const mousePosition = useRef({ x: 0, y: 0 });
   const dotPosition = useRef({ x: 0, y: 0 });
   const borderDotPosition = useRef({ x: 0, y: 0 });
-  const [renderPos, setRenderPos] = useState({
-    dot: { x: 0, y: 0 },
-    border: { x: 0, y: 0 },
-  });
   const [isHovering, setIsHovering] = useState(false);
+
+  // Refs for direct DOM manipulation
+  const dotRef = useRef<HTMLDivElement>(null);
+  const borderRef = useRef<HTMLDivElement>(null);
+
   const DOT_SMOOTHNESS = 0.2;
   const BORDER_DOT_SMOOTHNESS = 0.1;
 
@@ -19,62 +20,62 @@ function SmoothFollower() {
     const handleMouseEnter = () => setIsHovering(true);
     const handleMouseLeave = () => setIsHovering(false);
 
-    // Add event listeners
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Select all interactive elements
-    // This includes links, buttons, inputs, textareas, and elements with the 'interactive' class
     const interactiveElements = document.querySelectorAll(
-      "a, button, input, textarea, .interactive, button",
+      "a, button, input, textarea, .interactive",
     );
     interactiveElements.forEach((element) => {
       element.addEventListener("mouseenter", handleMouseEnter);
       element.addEventListener("mouseleave", handleMouseLeave);
     });
 
-    // Animation function for smooth movement
     const animate = () => {
       const lerp = (start: number, end: number, factor: number) => {
         return start + (end - start) * factor;
       };
 
-      dotPosition.current.x = lerp(
+      const newDotX = lerp(
         dotPosition.current.x,
         mousePosition.current.x,
         DOT_SMOOTHNESS,
       );
-      dotPosition.current.y = lerp(
+      const newDotY = lerp(
         dotPosition.current.y,
         mousePosition.current.y,
         DOT_SMOOTHNESS,
       );
 
-      borderDotPosition.current.x = lerp(
+      const newBorderX = lerp(
         borderDotPosition.current.x,
         mousePosition.current.x,
         BORDER_DOT_SMOOTHNESS,
       );
-      borderDotPosition.current.y = lerp(
+      const newBorderY = lerp(
         borderDotPosition.current.y,
         mousePosition.current.y,
         BORDER_DOT_SMOOTHNESS,
       );
 
-      setRenderPos({
-        dot: { x: dotPosition.current.x, y: dotPosition.current.y },
-        border: {
-          x: borderDotPosition.current.x,
-          y: borderDotPosition.current.y,
-        },
-      });
+      // Update stored positions
+      dotPosition.current = { x: newDotX, y: newDotY };
+      borderDotPosition.current = { x: newBorderX, y: newBorderY };
+
+      // Direct DOM manipulation, no React re-renders
+      if (dotRef.current) {
+        dotRef.current.style.transform = `translate(${newDotX - 4}px, ${newDotY - 4}px)`;
+      }
+
+      if (borderRef.current) {
+        const borderSize = isHovering ? 22 : 14; // Half of 44px or 28px
+        borderRef.current.style.transform = `translate(${newBorderX - borderSize}px, ${newBorderY - borderSize}px)`;
+      }
 
       requestAnimationFrame(animate);
     };
 
-    // Start animation loop
     const animationId = requestAnimationFrame(animate);
 
-    // Clean up
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
 
@@ -87,31 +88,40 @@ function SmoothFollower() {
     };
   }, []);
 
+  useEffect(() => {
+    if (borderRef.current) {
+      borderRef.current.style.width = isHovering ? "44px" : "28px";
+      borderRef.current.style.height = isHovering ? "44px" : "28px";
+    }
+  }, [isHovering]);
+
   if (typeof window === "undefined") return null;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-3000 hidden md:block">
-      {/* small circle */}
+      {/* Small circle */}
       <div
+        ref={dotRef}
         className="absolute rounded-full bg-black dark:bg-white"
         style={{
           width: "8px",
           height: "8px",
-          transform: "translate(-50%, -50%)",
-          left: `${renderPos.dot.x}px`,
-          top: `${renderPos.dot.y}px`,
+          transform: "translate(-4px, -4px)",
         }}
       />
-      {/* big circle */}
+      {/* Big circle */}
       <div
-        className={`absolute rounded-full border transition-all duration-500 ${isHovering ? "border-3 border-cyan-500 dark:border-green-500" : "border-black dark:border-white"}`}
+        ref={borderRef}
+        className={`absolute rounded-full border transition-all duration-500 ${
+          isHovering
+            ? "border-3 border-cyan-500 dark:border-green-500"
+            : "border-black dark:border-white"
+        }`}
         style={{
-          width: isHovering ? "44px" : "28px",
-          height: isHovering ? "44px" : "28px",
-          transform: "translate(-50%, -50%)",
-          left: `${renderPos.border.x}px`,
-          top: `${renderPos.border.y}px`,
-          transition: "width 0.3s, height 0.3s",
+          width: "28px",
+          height: "28px",
+          transform: "translate(-14px, -14px)",
+          transition: "width 0.3s, height 0.3s, border-color 0.5s",
         }}
       />
     </div>

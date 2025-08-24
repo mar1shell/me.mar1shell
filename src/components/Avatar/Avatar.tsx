@@ -5,7 +5,7 @@ function Avatar({ src = "/images/avatar.webp", alt = "Avatar" }: AvatarProps) {
     <div className="flex items-center justify-center transition md:col-span-2">
       <div
         data-aos="fade-right"
-        className="group interactive relative h-55 w-55 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-teal-400 p-3 shadow-2xl md:h-72 md:w-72 xl:h-80 xl:w-80 dark:from-teal-400 dark:via-lime-500 dark:to-green-600"
+        className="group relative h-55 w-55 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-teal-400 p-3 shadow-2xl md:h-72 md:w-72 xl:h-80 xl:w-80 dark:from-teal-400 dark:via-lime-500 dark:to-green-600"
       >
         <img
           src={src}
