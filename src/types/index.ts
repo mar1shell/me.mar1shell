@@ -61,6 +61,7 @@ interface Project {
   sourceCode?: string;
   featured?: boolean;
   unfinished?: boolean;
+  hasMobileImage: boolean;
 }
 
 interface ProjectCardProps {

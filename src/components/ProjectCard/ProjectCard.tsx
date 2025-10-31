@@ -38,7 +38,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                 <img
                   src={project.imageDesktop || "/placeholder.svg"}
                   alt={project.title}
-                  className="aspect-video object-cover"
+                  className="aspect-square object-cover"
                 />
               </div>
             </div>
@@ -47,19 +47,21 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             <div className="h-4 rounded-b-xl bg-gray-700 shadow-lg"></div>
 
             {/* Mobile Mockup */}
-            <div
-              className={`absolute ${index % 2 === 1 ? "-left-6 lg:-left-12" : "-right-6 lg:-right-12"} -bottom-6 w-20 lg:w-24`}
-            >
-              <div className="rounded-2xl bg-gray-800 p-1 shadow-xl">
-                <div className="aspect-[9/16] overflow-hidden rounded-xl bg-white dark:bg-slate-900">
-                  <img
-                    src={project.imageMobile}
-                    alt={`${project.title} mobile`}
-                    className="h-full w-full object-cover"
-                  />
+            {project.hasMobileImage && (
+              <div
+                className={`absolute ${index % 2 === 1 ? "-left-6 lg:-left-12" : "-right-6 lg:-right-12"} -bottom-6 w-20 lg:w-24`}
+              >
+                <div className="rounded-2xl bg-gray-800 p-1 shadow-xl">
+                  <div className="aspect-[9/16] overflow-hidden rounded-xl bg-white dark:bg-slate-900">
+                    <img
+                      src={project.imageMobile}
+                      alt={`${project.title} mobile`}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </a>
 
           {/* Glow Effect */}

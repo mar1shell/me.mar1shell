@@ -204,25 +204,19 @@ const projects: Project[] = [
     liveDemo: "https://monclavier.mar1shell.me",
     featured: true,
     unfinished: true,
+    hasMobileImage: true,
   },
   {
     id: 1,
-    title: "Finex - Financial Management App",
+    title: "mar1server - a simple http server in C",
     description:
-      "A full-stack financial management application to help users track their income, expenses, budgets, and financial goals. Built with React, Tailwind CSS, and Django REST Framework. Includes smooth UI animations and a modern analytics dashboard.",
-    imageDesktop: "/images/projects/finex/desktop.webp",
-    imageMobile: "/images/projects/finex/mobile.webp",
-    technologies: [
-      "React",
-      "Tailwind CSS",
-      "Django",
-      "Django REST",
-      "Framer Motion",
-    ],
-    liveDemo: "https://finex.ensamien.com", // Replace with real URL if available
-    sourceCode: "https://github.com/mar1shell", // Replace with your actual repo link
+      "A simple HTTP server implementation from scratch in C that handles concurrent requests and serves static files.",
+    imageDesktop: "/images/projects/mar1server/desktop.webp",
+    technologies: ["C", "HTTP", "Sockets", "Linux"],
+    sourceCode: "https://github.com/mar1shell/mar1server",
     featured: true,
-    unfinished: true,
+    unfinished: false,
+    hasMobileImage: false,
   },
   {
     id: 2,
@@ -235,7 +229,8 @@ const projects: Project[] = [
     liveDemo: "https://mar1shell.me",
     sourceCode: "https://github.com/mar1shell",
     featured: true,
-    unfinished: true,
+    unfinished: false,
+    hasMobileImage: true,
   },
 ];
 
