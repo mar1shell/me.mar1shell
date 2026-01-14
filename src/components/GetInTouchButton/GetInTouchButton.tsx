@@ -5,11 +5,10 @@ function GetInTouchButton() {
   return (
     <a
       href={`mailto:${personalInfo.email}`}
-      className="group inline-flex items-center gap-2 rounded-full bg-blue-400 px-8 py-4 font-semibold text-gray-900 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-400/25 active:scale-95 dark:bg-green-400 dark:hover:shadow-green-400/25"
+      className="group inline-flex items-center justify-center gap-2 rounded-full border-2 border-blue-700 bg-white/80 px-6 py-3 font-semibold text-blue-700 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-blue-600 hover:bg-blue-600 hover:text-white hover:shadow-lg active:scale-95 dark:border-green-400 dark:bg-transparent dark:text-green-400 dark:hover:bg-green-400 dark:hover:text-gray-900"
     >
       <MailIcon />
       Get In Touch
-      <div className="h-2 w-2 rounded-full bg-gray-900 group-hover:animate-ping"></div>
     </a>
   );
 }

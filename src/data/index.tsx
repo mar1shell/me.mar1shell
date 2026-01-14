@@ -25,6 +25,7 @@ const personalInfo = {
   email: "elhamdaouimar1@gmail.com",
   location: "Casablanca, Morocco",
   website: "https://mar1shell.me",
+  calcom: "https://cal.com/mar1shell",
   socialMedia: {
     twitter: "https://x.com/mar1shell",
     instagram: "https://www.instagram.com/el_hamdaouimarouane",
