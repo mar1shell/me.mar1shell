@@ -77,13 +77,13 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         {/* Project Tags */}
         <div className="flex items-center justify-center gap-2">
           {project.featured && (
-            <span className="inline-block scale-90 rounded-full border border-cyan-400/20 bg-blue-400/10 px-3 py-1 text-sm font-semibold text-cyan-500 md:scale-100 dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-400">
+            <span className="inline-block scale-90 rounded-full border border-cyan-400/20 bg-blue-400/10 px-3 py-1 text-sm font-semibold text-cyan-900 md:scale-100 dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-400">
               Featured Project
             </span>
           )}
 
           {project.unfinished && (
-            <span className="inline-flex scale-90 items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-3 py-1 text-sm font-semibold text-amber-500 md:scale-100 dark:border-yellow-400/30 dark:bg-yellow-500/10 dark:text-yellow-300">
+            <span className="inline-flex scale-90 items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-3 py-1 text-sm font-semibold text-amber-700 md:scale-100 dark:border-yellow-400/30 dark:bg-yellow-500/10 dark:text-yellow-300">
               Under Construction
             </span>
           )}

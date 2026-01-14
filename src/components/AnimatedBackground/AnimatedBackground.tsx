@@ -2,21 +2,21 @@ import "./AnimatedBackground.css";
 
 export default function AnimatedBackground() {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden bg-white dark:bg-gray-900">
+    <div className="fixed inset-0 -z-10 overflow-hidden bg-gray-300 dark:bg-gray-900">
       {/* Light mode gradient background */}
       <div className="absolute inset-0 dark:hidden">
         {/* Base gradient - bluish theme */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-slate-100 to-blue-100" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-slate-100 to-blue-200" />
 
         {/* Primary vibrant blobs with stronger presence */}
         <div
           className={`animate-blob absolute top-1/4 left-1/4 h-[550px] w-[550px] rounded-full bg-blue-500 opacity-50 mix-blend-multiply blur-3xl filter`}
         />
         <div
-          className={`animate-blob animation-delay-2000 absolute top-1/3 right-1/4 h-[550px] w-[550px] rounded-full bg-cyan-500 opacity-55 mix-blend-multiply blur-3xl filter`}
+          className={`animate-blob animation-delay-2000 absolute top-1/3 right-1/4 h-[550px] w-[550px] rounded-full bg-cyan-400 opacity-55 mix-blend-multiply blur-3xl filter`}
         />
         <div
-          className={`animate-blob animation-delay-4000 absolute bottom-1/4 left-1/3 h-[550px] w-[550px] rounded-full bg-sky-400 opacity-45 mix-blend-multiply blur-3xl filter`}
+          className={`animate-blob animation-delay-4000 absolute bottom-1/4 left-1/3 h-[550px] w-[550px] rounded-full bg-sky-200 opacity-45 mix-blend-multiply blur-3xl filter`}
         />
 
         {/* Additional accent blobs for more visual interest */}
