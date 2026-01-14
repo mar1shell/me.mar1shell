@@ -9,7 +9,6 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import useAosEffect from "./hooks/useAosEffect/useAosEffect";
 import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
-import AchievementsSection from "./sections/AchievementsSection/AchievementsSection";
 
 function App() {
   useAosEffect();
@@ -22,7 +21,7 @@ function App() {
         <main className="container mx-auto flex flex-col items-center justify-center px-4">
           <HeroSection />
           <AboutMeSection />
-          <AchievementsSection />
+          {/* <AchievementsSection /> */}
           <ProjectsSection />
           <ExperienceSection />
           <ContactSection />

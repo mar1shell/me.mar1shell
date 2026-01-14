@@ -2,7 +2,7 @@ import DarkModeSwitch from "../DarkModeSwitch/DarkModeSwitch";
 import useScrollTop from "../../hooks/useScrollTop/useScrollTop";
 
 function NavBar() {
-  const [showNav, isNavTop] = useScrollTop();
+  const [showNav] = useScrollTop();
 
   return (
     <nav
