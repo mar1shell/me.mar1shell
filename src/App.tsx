@@ -8,17 +8,21 @@ import ContactSection from "./sections/ContactSection/ContactSection";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import useAosEffect from "./hooks/useAosEffect/useAosEffect";
+import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
+import AchievementsSection from "./sections/AchievementsSection/AchievementsSection";
 
 function App() {
   useAosEffect();
 
   return (
     <>
-      <div className="overflow-x-hidden bg-gray-100 font-sans transition-colors duration-500 dark:bg-gray-900">
+      <div className="overflow-x-hidden font-sans transition-colors duration-500">
+        <AnimatedBackground />
         <NavBar />
         <main className="container mx-auto flex flex-col items-center justify-center px-4">
           <HeroSection />
           <AboutMeSection />
+          <AchievementsSection />
           <ProjectsSection />
           <ExperienceSection />
           <ContactSection />
