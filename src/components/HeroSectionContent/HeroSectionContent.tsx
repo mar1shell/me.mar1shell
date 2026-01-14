@@ -30,7 +30,7 @@ function HeroSectionContent() {
       </div>
 
       {/* Social media icons block */}
-      <div className="flex items-center justify-center gap-6 md:justify-start">
+      <div className="flex items-center justify-center gap-6">
         <SocialMediaBar />
       </div>
     </div>

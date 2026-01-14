@@ -89,7 +89,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           )}
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-blue-400 md:text-3xl dark:text-white dark:group-hover:text-green-400">
+        <h3 className="text-2xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-blue-700 md:text-3xl dark:text-white dark:group-hover:text-green-400">
           {project.title}
         </h3>
 
