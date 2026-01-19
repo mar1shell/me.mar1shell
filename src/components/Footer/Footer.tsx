@@ -1,7 +1,8 @@
-import { personalInfo, socialMediaIcons2, stats } from "../../data";
+import { personalInfo, socialMediaIcons2 } from "../../data";
+// import { stats } from "../../data";
 import { HeartIcon, MapPinIcon } from "../../icons";
 import SocialMediaIcon2 from "../SocialMediaIcon2/SocialMediaIcon2";
-import Stats from "../Stats/Stats";
+// import Stats from "../Stats/Stats";
 import GetInTouchButton from "../GetInTouchButton/GetInTouchButton";
 
 function Footer() {
@@ -33,11 +34,11 @@ function Footer() {
       </div>
 
       {/* Stats Section */}
-      <div className="mb-12 grid grid-cols-1 gap-6 sm:mb-16 sm:grid-cols-3 sm:gap-8">
+      {/* <div className="mb-12 grid grid-cols-1 gap-6 sm:mb-16 sm:grid-cols-3 sm:gap-8">
         {stats.map((stat, index) => (
           <Stats key={index} index={index} stat={stat} />
         ))}
-      </div>
+      </div> */}
 
       {/* Social Links */}
       <div className="mb-12 flex justify-center gap-4">

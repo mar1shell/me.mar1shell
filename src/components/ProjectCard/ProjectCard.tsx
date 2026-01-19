@@ -38,7 +38,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                 <img
                   src={project.imageDesktop || "/placeholder.svg"}
                   alt={project.title}
-                  className="aspect-square object-cover"
+                  className="object-contain"
                 />
               </div>
             </div>
