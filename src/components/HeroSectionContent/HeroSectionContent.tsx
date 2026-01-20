@@ -24,7 +24,7 @@ function HeroSectionContent() {
       </ul>
 
       {/* Action Buttons */}
-      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center md:justify-start">
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
         <BookMeetingButton />
         <GetInTouchButton />
       </div>

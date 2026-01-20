@@ -38,7 +38,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                 <img
                   src={project.imageDesktop || "/placeholder.svg"}
                   alt={project.title}
-                  className="object-contain"
+                  className="h-full w-full object-contain"
                 />
               </div>
             </div>
@@ -56,7 +56,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                     <img
                       src={project.imageMobile}
                       alt={`${project.title} mobile`}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain"
                     />
                   </div>
                 </div>
@@ -77,7 +77,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         {/* Project Tags */}
         <div className="flex items-center justify-center gap-2">
           {project.featured && (
-            <span className="inline-block scale-90 rounded-full border border-cyan-400/20 bg-blue-400/10 px-3 py-1 text-sm font-semibold text-cyan-900 md:scale-100 dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-400">
+            <span className="inline-block scale-90 rounded-full border border-cyan-800/20 bg-blue-400/10 px-3 py-1 text-sm font-semibold text-cyan-900 md:scale-100 dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-400">
               Featured Project
             </span>
           )}
@@ -93,7 +93,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           {project.title}
         </h3>
 
-        <p className="text-sm leading-relaxed text-gray-600 md:text-base dark:text-gray-300">
+        <p className="text-sm leading-relaxed text-gray-800 md:text-base dark:text-gray-300">
           {project.description}
         </p>
 

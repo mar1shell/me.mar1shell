@@ -21,7 +21,6 @@ function App() {
         <main className="container mx-auto flex flex-col items-center justify-center px-4">
           <HeroSection />
           <AboutMeSection />
-          {/* <AchievementsSection /> */}
           <ProjectsSection />
           <ExperienceSection />
           <ContactSection />

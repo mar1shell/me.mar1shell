@@ -89,12 +89,12 @@ function ExperienceCard({ experience, index }: ExperienceCardProps) {
         {/* Badges */}
         <div className="flex flex-wrap gap-3">
           {experience.featured && (
-            <span className="inline-block rounded-full border border-cyan-400/20 bg-blue-400/10 px-3 py-1 text-sm font-medium text-cyan-500 dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-400">
+            <span className="inline-block rounded-full border border-cyan-800/20 bg-blue-400/10 px-3 py-1 text-sm font-medium text-cyan-800 dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-400">
               Featured Experience
             </span>
           )}
           {experience.current && (
-            <span className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-3 py-1 text-sm font-medium text-green-600 dark:border-green-400/30 dark:bg-green-500/10 dark:text-green-400">
+            <span className="inline-flex items-center gap-2 rounded-full border border-green-800/30 bg-green-500/10 px-3 py-1 text-sm font-medium text-green-800 dark:border-green-400/30 dark:bg-green-500/10 dark:text-green-400">
               <div className="h-2 w-2 animate-pulse rounded-full bg-green-500"></div>
               Current
             </span>
@@ -107,7 +107,7 @@ function ExperienceCard({ experience, index }: ExperienceCardProps) {
         </h3>
 
         {/* Description */}
-        <p className="text-sm leading-relaxed text-gray-600 md:text-base dark:text-gray-300">
+        <p className="text-sm leading-relaxed text-gray-800 md:text-base dark:text-gray-300">
           {experience.description}
         </p>
 
@@ -123,7 +123,7 @@ function ExperienceCard({ experience, index }: ExperienceCardProps) {
             {experience.achievements.map((achievement, achIndex) => (
               <li key={achIndex} className="flex items-start gap-3">
                 <ChevronRightIcon />
-                <span className="text-sm text-gray-700 md:text-base dark:text-gray-300">
+                <span className="text-sm text-gray-800 md:text-base dark:text-gray-300">
                   {achievement}
                 </span>
               </li>
