@@ -18,7 +18,7 @@ function App() {
       <div className="overflow-x-hidden font-sans transition-colors duration-500">
         <AnimatedBackground />
         <NavBar />
-        <main className="container mx-auto flex flex-col items-center justify-center px-4">
+        <main className="container mx-auto flex flex-col items-center justify-center px-5">
           <HeroSection />
           <AboutMeSection />
           <ProjectsSection />

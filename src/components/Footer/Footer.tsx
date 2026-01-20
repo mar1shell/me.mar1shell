@@ -53,21 +53,18 @@ function Footer() {
         data-aos="zoom-in"
       >
         <div className="mb-4 flex flex-col items-center justify-center gap-2 text-gray-600 sm:flex-row dark:text-gray-400">
-          <span>
-            © {currentYear}{" "}
+          <span>© {currentYear} </span>
+          <span className="hidden sm:inline">•</span>
+          <div className="flex items-center gap-1">
+            <span>Crafted with</span>
+            <HeartIcon />
             <a
               href={personalInfo.socialMedia.github}
               target="_blank"
               className="interactive font-semibold text-gray-900 transition-colors duration-300 hover:text-blue-500 dark:text-white dark:hover:text-green-400"
             >
-              Mar1shell
+              mar1shell
             </a>
-          </span>
-          <span className="hidden sm:inline">•</span>
-          <div className="flex items-center gap-1">
-            <span>Crafted with</span>
-            <HeartIcon />
-            <span>in Casablanca, Morocco</span>
           </div>
         </div>
 

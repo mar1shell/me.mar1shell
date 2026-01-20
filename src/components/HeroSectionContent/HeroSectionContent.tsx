@@ -9,7 +9,7 @@ function HeroSectionContent() {
     <div className="flex flex-col md:col-span-3" data-aos="fade-left">
       <h1 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl md:whitespace-nowrap dark:text-white">
         Hello, I'm{" "}
-        <span className="inline-block bg-gradient-to-tr from-blue-700 via-indigo-600 to-cyan-600 bg-clip-text pl-1 text-4xl font-extrabold text-transparent drop-shadow-sm transition-all duration-500 md:text-5xl dark:from-teal-400 dark:via-lime-500 dark:to-green-600">
+        <span className="inline-block bg-gradient-to-tr from-blue-800 via-indigo-600 to-cyan-700 bg-clip-text pl-1 text-4xl font-extrabold text-transparent drop-shadow-sm transition-all duration-500 md:text-5xl dark:from-teal-400 dark:via-lime-500 dark:to-green-600">
           Marouane
         </span>
       </h1>
