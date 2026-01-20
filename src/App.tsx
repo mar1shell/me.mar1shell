@@ -9,12 +9,14 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import useAosEffect from "./hooks/useAosEffect/useAosEffect";
 import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   useAosEffect();
 
   return (
     <>
+      <SpeedInsights />
       <div className="overflow-x-hidden font-sans transition-colors duration-500">
         <AnimatedBackground />
         <NavBar />
