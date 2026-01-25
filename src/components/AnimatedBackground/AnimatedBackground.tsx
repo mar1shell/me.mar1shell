@@ -1,54 +1,98 @@
-import "./AnimatedBackground.css";
+import { useEffect, useRef } from "react";
 
 export default function AnimatedBackground() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let animationFrameId: number;
+    let stars: { x: number; y: number; z: number; color: string }[] = [];
+
+    // Config
+    const starCount = 100; // Reduced from 200
+    const speed = 4; // Reduced speed for calmer effect
+
+    // Pink/Cyan Palette
+    const colors = [
+      "#6b7280", // gray-500 - neutral, visible in both modes
+      "#9ca3af", // gray-400 - lighter gray
+      "#4b5563", // gray-600 - darker gray
+      "#d1d5db", // gray-300 - light gray for dark mode
+      "#374151", // gray-700 - dark gray for light mode
+    ];
+
+    const initStars = () => {
+      stars = [];
+      for (let i = 0; i < starCount; i++) {
+        stars.push({
+          x: (Math.random() - 0.5) * canvas.width * 2,
+          y: (Math.random() - 0.5) * canvas.height * 2,
+          z: Math.random() * canvas.width,
+          color: colors[Math.floor(Math.random() * colors.length)],
+        });
+      }
+    };
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initStars();
+    };
+
+    const draw = () => {
+      // Performance optimization: clearRect is faster than fillRect with alpha (which causes read-back)
+      // We lose the trail effect, but gain significant performance
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+
+      stars.forEach((star) => {
+        // Update Star
+        star.z -= speed;
+        if (star.z <= 0) {
+          star.x = (Math.random() - 0.5) * canvas.width * 2;
+          star.y = (Math.random() - 0.5) * canvas.height * 2;
+          star.z = canvas.width;
+        }
+
+        // Project Star
+        const x = (star.x / star.z) * 100 + cx;
+        const y = (star.y / star.z) * 100 + cy;
+        const radius = (1 - star.z / canvas.width) * 3; // Size based on depth
+
+        // Draw Star
+        ctx.beginPath();
+        // Performance: Use square instead of arc for tiny stars if needed, but arc is okay for small count
+        ctx.arc(x, y, Math.max(0, radius), 0, Math.PI * 2);
+        ctx.fillStyle = star.color;
+        ctx.fill();
+      });
+
+      animationFrameId = requestAnimationFrame(draw);
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+    draw();
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvas);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden bg-gray-300 dark:bg-gray-900">
-      {/* Light mode gradient background */}
-      <div className="absolute inset-0 dark:hidden">
-        {/* Base gradient - bluish theme */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-slate-100 to-blue-200" />
+    <div className="fixed inset-0 -z-10 bg-gray-50 transition-colors duration-500 dark:bg-gray-950">
+      <canvas ref={canvasRef} className="absolute inset-0" />
 
-        {/* Primary vibrant blobs with stronger presence */}
-        <div
-          className={`animate-blob absolute top-1/4 left-1/4 h-[550px] w-[550px] rounded-full bg-blue-500 opacity-50 mix-blend-multiply blur-3xl filter`}
-        />
-        <div
-          className={`animate-blob animation-delay-2000 absolute top-1/3 right-1/4 h-[550px] w-[550px] rounded-full bg-cyan-400 opacity-55 mix-blend-multiply blur-3xl filter`}
-        />
-        <div
-          className={`animate-blob animation-delay-4000 absolute bottom-1/4 left-1/3 h-[550px] w-[550px] rounded-full bg-sky-200 opacity-45 mix-blend-multiply blur-3xl filter`}
-        />
-
-        {/* Additional accent blobs for more visual interest */}
-        <div
-          className={`animate-blob animation-delay-2000 absolute top-1/2 right-1/3 h-96 w-96 rounded-full bg-indigo-400 opacity-40 mix-blend-multiply blur-3xl filter`}
-        />
-        <div
-          className={`animate-blob animation-delay-4000 absolute right-1/4 bottom-1/3 h-96 w-96 rounded-full bg-teal-400 opacity-45 mix-blend-multiply blur-3xl filter`}
-        />
-      </div>
-
-      {/* Dark mode gradient background */}
-      <div className="absolute inset-0 hidden dark:block">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
-
-        <div
-          className={`animate-blob absolute top-1/4 left-1/4 h-[500px] w-[500px] rounded-full bg-teal-500 opacity-30 mix-blend-screen blur-3xl filter`}
-        />
-        <div
-          className={`animate-blob animation-delay-2000 absolute top-1/3 right-1/4 h-[500px] w-[500px] rounded-full bg-lime-500 opacity-25 mix-blend-screen blur-3xl filter`}
-        />
-        <div
-          className={`animate-blob animation-delay-4000 absolute bottom-1/4 left-1/3 h-[500px] w-[500px] rounded-full bg-green-500 opacity-20 mix-blend-screen blur-3xl filter`}
-        />
-      </div>
-
-      {/* Additional subtle accent lines for modern feel */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 left-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent dark:via-green-500/20" />
-        <div className="absolute right-0 bottom-0 left-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent dark:via-green-500/20" />
-      </div>
+      {/* Optional: Add a subtle overlay gradient for depth */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/50 dark:to-black/50" />
     </div>
   );
 }
