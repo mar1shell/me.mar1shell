@@ -48,6 +48,20 @@ interface TerminalData {
   bio: string;
 }
 
+// Achievements
+interface Achievement {
+  id: number;
+  title: string;
+  rank?: string;
+  description?: string;
+  team?: string;
+  date: string;
+  icon?: React.ReactNode;
+  image?: string;
+  link?: string;
+  featured?: boolean;
+}
+
 // projects section
 
 interface Project {
@@ -130,6 +144,7 @@ export type {
   NavBarLinkProps,
   AvatarProps,
   TerminalTemplateProps,
+  Achievement,
   SocialLink,
   Stat,
   Experience,

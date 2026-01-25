@@ -5,6 +5,7 @@ import type {
   Project,
   Experience,
   SocialMediaIconProps,
+  Achievement,
 } from "../types";
 import {
   CodeIcon,
@@ -15,6 +16,7 @@ import {
   UsersIcon,
   ZapIcon,
 } from "../icons";
+import { Code2, Gamepad2, Music } from "lucide-react";
 
 // General
 
@@ -52,6 +54,15 @@ const heroCaptions: HeroCaption[] = [
       "📚 Exploring software engineering deeply through projects and study",
   },
 ];
+
+export const typewriterText = [
+  "a Software Engineer",
+  "a Fullstack Developer",
+  "an AI Enthusiast",
+  "a Problem Solver",
+];
+
+export const glitchText = "Marouane";
 
 const SocialMediaIcons: SocialMediaIconProps[] = [
   {
@@ -184,6 +195,90 @@ const terminalData: TerminalData = {
   command: "cat aboutmar1.txt",
   bio: "Hey! I'm Marouane, a Computer Science & AI student at ENSAM Casablanca. I love solving LeetCode problems, building fullstack apps, and walking the streets of Casablanca with a playlist full of diverse music. I’m passionate about software engineering, currently diving into backend fundamentals and crafting clean, meaningful code. I also enjoy volunteering, reading the news, and dreaming big. Hire me before I join the Night’s Watch. 😉",
 };
+
+const aboutMeData = {
+  description: (
+    <>
+      <p className="text-xl leading-relaxed font-light text-gray-800 md:text-2xl dark:text-gray-200">
+        Hey! I'm{" "}
+        <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-bold text-transparent dark:from-green-400 dark:to-emerald-400">
+          Marouane
+        </span>
+        . A Computer Science & AI student obsessed with building clean software
+        and solving complex problems.
+      </p>
+      <p className="mt-4 text-base text-gray-600 dark:text-gray-400">
+        Currently keeping busy with LeetCode, building Fullstack Apps, and
+        diving deep into Backend Fundamentals. When I'm not coding, I'm probably
+        volunteering or exploring Casablanca.
+      </p>
+    </>
+  ),
+  techStack: [
+    "Express.js",
+    "TypeScript",
+    "Node.js",
+    "Python",
+    "Tailwind",
+    "React",
+    "Spring Boot",
+    "Java",
+    "C++",
+  ],
+  interests: [
+    {
+      icon: <Gamepad2 className="h-5 w-5 text-purple-500" />,
+      title: "Gaming",
+    },
+    {
+      icon: <Music className="h-5 w-5 text-pink-500" />,
+      title: "Music",
+    },
+    {
+      icon: <Code2 className="h-5 w-5 text-blue-500" />,
+      title: "DSA & Problem Solving",
+    },
+  ],
+};
+
+// Achievements Section
+
+export const achievements: Achievement[] = [
+  {
+    id: 1,
+    title: "ODC Champions 2025",
+    rank: "National Champions & 3rd Place International",
+    team: "Atlas Coders",
+    description:
+      "Competed against top teams globally in 4 rounds of algorithm optimization, bot programming, coding escape, and competitive programming.",
+    date: "2025",
+    image: "/images/achievements/odc/odc.webp",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7404958675808833538/", // Add your link here
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "ECPC - ENSAMC Programming Contest",
+    rank: "3rd Prize",
+    description:
+      "Competed in a competitve programming contest organized in our school and won 3rd place two years in a row. ",
+    date: "2024 & 2025",
+    image: "/images/achievements/ecpc/ecpc.webp",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7313216200597995520/",
+    featured: true,
+  },
+  {
+    id: 3,
+    title: "AI Crafters VibeCoding Hackathon",
+    rank: "Top 8 out of 100",
+    description:
+      'Pitched "7a9i – Know Your Right", a web platform designed to help Moroccans understand their legal rights and bridge the gap between citizens and the law.',
+    date: "2025",
+    image: "/images/achievements/ai-crafters/ai-crafters.webp",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7348743331713105920/",
+    featured: false,
+  },
+];
 
 // Projects Section Data
 
@@ -387,6 +482,7 @@ const stats = [
 export {
   heroCaptions,
   terminalData,
+  aboutMeData,
   projects,
   experiences,
   socialMediaIcons2,

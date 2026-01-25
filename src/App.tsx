@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import useAosEffect from "./hooks/useAosEffect/useAosEffect";
 import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import AchievementsSection from "./sections/AchievementsSection/AchievementsSection";
 
 function App() {
   useAosEffect();
@@ -23,6 +24,7 @@ function App() {
         <main className="container mx-auto flex flex-col items-center justify-center px-5">
           <HeroSection />
           <AboutMeSection />
+          <AchievementsSection />
           <ProjectsSection />
           <ExperienceSection />
           <ContactSection />
